@@ -1,0 +1,56 @@
+{
+  "name": "vite-plugin-svg4vue",
+  "version": "1.0.0",
+  "description": "A vite plugin which could transform svg icon to vue component.",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "dev": "rollup --bundleConfigAsCjs -c -w",
+    "build": "rollup --bundleConfigAsCjs -c",
+    "release": "npm publish --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yisibell/vite-plugin-svg4vue.git"
+  },
+  "keywords": [
+    "vite-plugin",
+    "vue",
+    "svg",
+    "svg-component"
+  ],
+  "author": {
+    "name": "elenh",
+    "email": "yisiwings@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yisibell/vite-plugin-svg4vue/issues"
+  },
+  "homepage": "https://github.com/yisibell/vite-plugin-svg4vue#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "@vue/compiler-sfc": "^3.2.45",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "rollup": "^3.7.5",
+    "rollup-plugin-dts": "^5.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "~4.9.4",
+    "vite": "^4.0.2"
+  },
+  "dependencies": {
+    "svgo": "^3.0.2"
+  },
+  "peerDependencies": {
+    "@vue/compiler-sfc": "^3.2.45",
+    "vite": "^3.0.0 || ^4.0.2"
+  }
+}
