@@ -8,7 +8,8 @@
       <DuiXiangSvg width="48" height="48" />
       <FangChengXuanZeSvg width="48" height="48" />
       <FangzhencanshuSvg width="48" height="48" />
-      <PPTSvg />
+      <PPTSvg fill="red" />
+      <WordSvg width="56" height="56" />
 
       <h2>svg url</h2>
       <p>
@@ -26,6 +27,7 @@ import DuiXiangSvg from '@/icons/duixiang.svg?component'
 import FangChengXuanZeSvg from '@/icons/fangchengxuanze.svg?component'
 import FangzhencanshuSvg from '@/icons/fangzhencanshu.svg?component'
 import PPTSvg from '@/icons/ppt.svg?component'
+import WordSvg from '@/icons/word.svg?component'
 
 export default defineComponent({
   components: {
@@ -34,6 +36,7 @@ export default defineComponent({
     FangChengXuanZeSvg,
     FangzhencanshuSvg,
     PPTSvg,
+    WordSvg,
   },
   setup() {
     return {
@@ -51,12 +54,6 @@ export default defineComponent({
 
   h2 {
     margin-bottom: 16px;
-  }
-
-  svg {
-    path {
-      fill: aquamarine;
-    }
   }
 }
 </style>
