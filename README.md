@@ -49,7 +49,6 @@ module.exports = {
 <template>
   <div>
     <MyIcon />
-    <MyIcon2 />
 
     <img :src="MyIcon2" alt="" />
   </div>
@@ -57,18 +56,16 @@ module.exports = {
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MyIcon from './svgs/my-icon.svg'
-import MyIcon2 from './svgs/my-icon.svg?component'
-import MyIcon3 from './svgs/my-icon-2.svg?url'
+import MyIcon from '@/icons/my-icon.svg?component'
+import MyIcon2 from '@/icons/my-icon-2.svg?url'
 
 export default defineComponent({
   components: {
     MyIcon,
-    MyIcon2
   },
   setup() {
     return {
-      MyIcon3
+      MyIcon2
     }
   }
 })

@@ -1,5 +1,11 @@
 # CHANGE LOG
 
+## 1.1.1 (2022-12-20)
+
+**Bugfixs**
+
+1. fix package.json `files`
+
 ## 1.1.0 (2022-12-20)
 
 **Features**
