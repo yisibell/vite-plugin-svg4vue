@@ -39,7 +39,8 @@ module.exports = {
 | property | Default value | Description |
 | :---: | :---: | :---: |
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
-| `defaultExport` | `component` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
+| `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
+| `assetsDirName` | `icons` | Limit the svg icon in a folder |
 
 
 ## In Vue
@@ -72,4 +73,10 @@ export default defineComponent({
   }
 })
 </script>
+```
+
+If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts declaration file.
+
+``` ts
+/// <reference types="vite-plugin-svg4vue/client" />
 ```

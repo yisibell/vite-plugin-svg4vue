@@ -4,6 +4,7 @@ import type { Plugin as VitePlugin } from 'vite'
 interface Svg4VuePluginOptions {
   svgoConfig?: SvgoConfig
   defaultExport?: string
+  assetsDirName?: string
 }
 
 type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => VitePlugin

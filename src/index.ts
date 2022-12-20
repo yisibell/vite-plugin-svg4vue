@@ -38,16 +38,23 @@ async function optimizeSvg(
 }
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
-  const { svgoConfig = {}, defaultExport = 'component' } = options
+  const {
+    svgoConfig = {},
+    defaultExport = 'url',
+    assetsDirName = 'icons',
+  } = options
 
   const cache = new Map()
-  const svgRegex = /\.svg(?:\?(component|url))?$/
+
+  const svgRegex = new RegExp(
+    `${assetsDirName}/.*\\.svg(?:\\?(component|url))?$`
+  )
 
   return {
     name: 'vite-plugin-svg4vue',
     async transform(source: string, id: string) {
       const result = id.match(svgRegex)
-      // TODO
+      // TODO: enable cache in production mode
       const isBuild = false
 
       if (result) {
