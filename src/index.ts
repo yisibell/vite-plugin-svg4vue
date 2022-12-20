@@ -1,41 +1,7 @@
-import { compileTemplate } from '@vue/compiler-sfc'
+import compileSvg from './compileSvg'
+import optimizeSvg from './optimizeSvg'
 import { readFileSync } from 'fs'
-import { optimize } from 'svgo'
-import type { Config as SvgoConfig } from 'svgo'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
-
-/**
- * Compile svg to vue render function
- */
-async function compileSvg(source: string, id: string) {
-  let { code } = compileTemplate({
-    id,
-    filename: id,
-    source,
-    transformAssetUrls: false,
-  })
-
-  code = code.replace('export function render', 'function render')
-  code += `\nexport default { render };`
-
-  return code
-}
-
-/**
- * Optimize svg with svgo
- */
-async function optimizeSvg(
-  content: string,
-  path: string,
-  svgoConfig: SvgoConfig = {}
-) {
-  const { data } = await optimize(content, {
-    ...svgoConfig,
-    path,
-  })
-
-  return data
-}
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
