@@ -47,27 +47,35 @@ module.exports = {
 
 ```vue
 <template>
-  <div>
-    <MyIcon />
+  <div class="about">
+    <div>
+      <h1>This is an about page</h1>
 
-    <img :src="MyIcon2" alt="" />
+      <h2>svg component</h2>
+      <LogoSvg style="width: 36px" />
+
+      <h2>svg url</h2>
+      <p>
+        <img :src="logoSvgUrl" alt="" width="36" />
+      </p>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import MyIcon from '@/icons/my-icon.svg?component'
-import MyIcon2 from '@/icons/my-icon-2.svg?url'
+import LogoSvg from '@/icons/logo.svg?component'
+import logoSvgUrl from '@/icons/logo.svg?url'
 
 export default defineComponent({
   components: {
-    MyIcon,
+    LogoSvg,
   },
   setup() {
     return {
-      MyIcon2
+      logoSvgUrl,
     }
-  }
+  },
 })
 </script>
 ```
