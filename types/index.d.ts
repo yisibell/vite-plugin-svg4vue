@@ -5,6 +5,7 @@ interface Svg4VuePluginOptions {
   svgoConfig?: SvgoConfig
   defaultExport?: string
   assetsDirName?: string
+  enableBuildCache?: boolean
 }
 
 type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => VitePlugin

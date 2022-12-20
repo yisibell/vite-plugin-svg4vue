@@ -6,10 +6,9 @@
   "module": "lib/index.esm.js",
   "types": "types/index.d.ts",
   "files": [
-    "lib/index.cjs.js",
-    "lib/index.esm.js",
+    "lib",
     "client.d.ts",
-    "types/index.d.ts"
+    "types"
   ],
   "scripts": {
     "dev": "rollup --bundleConfigAsCjs -c -w",

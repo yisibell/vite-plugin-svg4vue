@@ -1,5 +1,11 @@
 # CHANGE LOG
 
+## 1.2.0 (2022-12-20)
+
+**Features**
+
+1. Support caching at build time
+
 ## 1.1.1 (2022-12-20)
 
 **Bugfixs**

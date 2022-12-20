@@ -41,6 +41,7 @@ module.exports = {
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
+| `enableBuildCache` | `true` | Whether to enable caching at build time |
 
 
 ## In Vue

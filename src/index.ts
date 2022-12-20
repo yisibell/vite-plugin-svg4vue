@@ -8,6 +8,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     svgoConfig = {},
     defaultExport = 'url',
     assetsDirName = 'icons',
+    enableBuildCache = true,
   } = options
 
   const cache = new Map()
@@ -16,12 +17,16 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     `${assetsDirName}/.*\\.svg(?:\\?(component|url))?$`
   )
 
+  let isBuild = false
+
   return {
     name: 'vite-plugin-svg4vue',
+    config(config, { command }) {
+      isBuild = command === 'build'
+      return config
+    },
     async transform(source: string, id: string) {
       const result = id.match(svgRegex)
-      // TODO: enable cache in production mode
-      const isBuild = false
 
       if (result) {
         const type = result[1]
@@ -47,7 +52,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
             result = await compileSvg(svg, idWithoutQuery)
 
-            if (isBuild) {
+            if (enableBuildCache && isBuild) {
               cache.set(idWithoutQuery, result)
             }
           }
