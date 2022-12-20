@@ -21,17 +21,19 @@ $ npm i vite-plugin-svg4vue -D
 # Usage
 ## Setup
 
-```js
-// vite.config.js
-const vue = require('@vitejs/plugin-vue');
-const { svg4VuePlugin } = require('vite-plugin-svg4vue');
+```ts
+// vite.config.ts
 
-module.exports = {
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { svg4VuePlugin } from 'vite-plugin-svg4vue'
+
+export default defineConfig({
   plugins: [
     vue(),
     svg4VuePlugin(),
   ],
-};
+})
 ```
 
 ## Options
@@ -53,7 +55,7 @@ module.exports = {
       <h1>This is an about page</h1>
 
       <h2>svg component</h2>
-      <LogoSvg style="width: 36px" />
+      <LogoSvg width="36" />
 
       <h2>svg url</h2>
       <p>

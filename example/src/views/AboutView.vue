@@ -4,7 +4,11 @@
       <h1>This is an about page</h1>
 
       <h2>svg component</h2>
-      <LogoSvg style="width: 36px" />
+      <DuiChengSvg width="48" height="48" />
+      <DuiXiangSvg width="48" height="48" />
+      <FangChengXuanZeSvg width="48" height="48" />
+      <FangzhencanshuSvg width="48" height="48" />
+      <PPTSvg />
 
       <h2>svg url</h2>
       <p>
@@ -16,12 +20,20 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import LogoSvg from '@/icons/logo.svg?component'
 import logoSvgUrl from '@/icons/logo.svg?url'
+import DuiChengSvg from '@/icons/duicheng.svg?component'
+import DuiXiangSvg from '@/icons/duixiang.svg?component'
+import FangChengXuanZeSvg from '@/icons/fangchengxuanze.svg?component'
+import FangzhencanshuSvg from '@/icons/fangzhencanshu.svg?component'
+import PPTSvg from '@/icons/ppt.svg?component'
 
 export default defineComponent({
   components: {
-    LogoSvg,
+    DuiChengSvg,
+    DuiXiangSvg,
+    FangChengXuanZeSvg,
+    FangzhencanshuSvg,
+    PPTSvg,
   },
   setup() {
     return {
@@ -31,12 +43,20 @@ export default defineComponent({
 })
 </script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+<style lang="scss">
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  svg {
+    path {
+      fill: aquamarine;
+    }
   }
 }
 </style>
