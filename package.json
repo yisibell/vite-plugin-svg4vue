@@ -39,7 +39,6 @@
     "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
-    "@vue/compiler-sfc": "^3.2.45",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
@@ -56,7 +55,7 @@
     "svgo": "^3.0.2"
   },
   "peerDependencies": {
-    "@vue/compiler-sfc": "^3.2.45",
+    "vue": "^3.2.45",
     "vite": "^3.0.0 || ^4.0.2"
   }
 }

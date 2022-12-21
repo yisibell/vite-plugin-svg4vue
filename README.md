@@ -1,6 +1,6 @@
 # vite-plugin-svg4vue
 
-A vite plugin which could transform svg icon to vue component.
+A vite plugin which can transform svg icon to vue component.
 
 # Features
 
@@ -44,6 +44,7 @@ export default defineConfig({
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |
+| `enableMonochromeSvgOptimize` | `true` | Whether to enable monochrome svg icon optimize which can move `fill` attribute value to parent node (svg element). So that you can change the svg icon color with `fill`. |
 
 
 ## In Vue

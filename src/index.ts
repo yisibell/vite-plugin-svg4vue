@@ -9,6 +9,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     defaultExport = 'url',
     assetsDirName = 'icons',
     enableBuildCache = true,
+    enableMonochromeSvgOptimize = true,
   } = options
 
   const cache = new Map()
@@ -48,7 +49,9 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           if (!result) {
             const code = readFileSync(idWithoutQuery, 'utf8')
 
-            const svg = await optimizeSvg(code, idWithoutQuery, svgoConfig)
+            const svg = await optimizeSvg(code, idWithoutQuery, svgoConfig, {
+              movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
+            })
 
             result = await compileSvg(svg, idWithoutQuery)
 

@@ -33,11 +33,11 @@ export default defineConfig({
 
                       const hasPathFill = allPathFillValue.length > 0
 
-                      const isPlainIcon =
+                      const isMonochromeSvg =
                         hasPathFill &&
                         [...new Set(allPathFillValue)].length === 1
 
-                      if (isPlainIcon) {
+                      if (isMonochromeSvg) {
                         node.attributes.fill = allPathFillValue[0]
 
                         pathElements.forEach((v) => {

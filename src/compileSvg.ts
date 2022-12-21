@@ -1,4 +1,4 @@
-import { compileTemplate } from '@vue/compiler-sfc'
+import { compileTemplate } from 'vue/compiler-sfc'
 
 /**
  * Compile svg to vue render function
