@@ -2909,10 +2909,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-svg4vue@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-1.2.0.tgz#3ba0bb62cab7ed7d343ae06643f9a8731b18105a"
-  integrity sha512-KcxDWk3XAWUHnQEJ3txTNJYa9kRQqyhiziWDsbdDV5Z5kojX53M+x8hR4skoA/F74O3Ax1ybPgJFbXG/JpKNhw==
+vite-plugin-svg4vue@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-2.0.0.tgz#aa4691eebce1e7561c8d4ae9c7ef3fe04ce5bf1e"
+  integrity sha512-cjZFWbHfngQxN4HRZRin82xR0Lenom/zVt9uexr3QsKoTPKWua9phNxazW2BgxqXygXBN5biylE46lAqDdvzkg==
   dependencies:
     svgo "^3.0.2"
 
