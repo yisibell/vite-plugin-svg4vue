@@ -61,7 +61,11 @@ export default defineConfig({
       <h2>svg component</h2>
 
       <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
-      <LogoSvg width="36" height="36" fill="red" />
+      <LogoSvg fill="red" />
+
+      <!-- you can change the svg icon size with `font-size` or `width`. both of this will be responsive -->
+      <LogoSvg font-size="48" />
+      <LogoSvg width="48" />
 
       <h2>svg url</h2>
 
