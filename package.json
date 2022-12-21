@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-svg4vue",
   "version": "2.0.1",
-  "description": "A vite plugin which could transform svg icon to vue component.",
+  "description": "A vite plugin can could transform svg icon to vue component.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "types": "types/index.d.ts",

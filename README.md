@@ -4,9 +4,10 @@ A vite plugin which can transform svg icon to vue component.
 
 # Features
 
-- [SVGO](https://github.com/svg/svgo) optimization
-- Hot Module Replacement support
-- Support for `?url` and `?component` query string
+- [SVGO](https://github.com/svg/svgo) optimization.
+- Hot Module Replacement support.
+- Support for `?url` and `?component` query string.
+- Support custom svg icon (monochrome) color with `fill` attribute, change svg icon size with `width` and `height` attribute.
 
 # Installation
 
@@ -56,9 +57,12 @@ export default defineConfig({
       <h1>This is an about page</h1>
 
       <h2>svg component</h2>
-      <LogoSvg width="36" />
+
+      <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
+      <LogoSvg width="36" height="36" fill="red" />
 
       <h2>svg url</h2>
+
       <p>
         <img :src="logoSvgUrl" alt="" width="36" />
       </p>
