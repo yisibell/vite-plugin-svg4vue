@@ -102,4 +102,4 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
 
 # Change Log
 
-see [CHANGELOG]('./CHANGELOG.md')
+see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>
