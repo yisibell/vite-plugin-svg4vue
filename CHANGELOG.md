@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## 2.0.2 (2022-12-21)
+
+**Upgrade**
+
+1. upgrade `svgo plugin` definition.
+
+**Features**
+
+1. Support change svg icon size with `font-size` and it will be responsive.
+
+
 ## 2.0.0 (2022-12-21)
 
 **Breaking changes**

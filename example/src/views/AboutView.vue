@@ -4,12 +4,12 @@
       <h1>This is an about page</h1>
 
       <h2>svg component</h2>
-      <DuiChengSvg width="48" height="48" />
-      <DuiXiangSvg width="48" height="48" />
-      <FangChengXuanZeSvg width="48" height="48" />
-      <FangzhencanshuSvg width="48" height="48" />
-      <PPTSvg fill="red" />
-      <WordSvg width="56" height="56" />
+      <DuiChengSvg font-size="48" />
+      <DuiXiangSvg font-size="48" />
+      <FangChengXuanZeSvg font-size="48" />
+      <FangzhencanshuSvg font-size="48" />
+      <PPTSvg fill="red" font-size="48" />
+      <WordSvg />
 
       <h2>svg url</h2>
       <p>

@@ -7,6 +7,7 @@ interface Svg4VuePluginOptions {
   assetsDirName?: string
   enableBuildCache?: boolean
   enableMonochromeSvgOptimize?: boolean
+  enableSvgSizeResponsive?: boolean
 }
 
 type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => VitePlugin

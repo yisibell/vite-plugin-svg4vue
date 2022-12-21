@@ -7,7 +7,15 @@ import { svg4VuePlugin } from 'vite-plugin-svg4vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), svg4VuePlugin(), vueJsx()],
+  plugins: [
+    vue(),
+    svg4VuePlugin({
+      svgoConfig: {
+        plugins: [],
+      },
+    }),
+    vueJsx(),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

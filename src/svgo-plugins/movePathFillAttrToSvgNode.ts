@@ -1,4 +1,5 @@
 import type { CustomPlugin } from 'svgo'
+import type { XastElement } from 'svgo/lib/types'
 
 /**
  * move fill attribute value to it's parent node (svg) when a svg element is a monochrome icon.
@@ -13,14 +14,16 @@ export default function (): CustomPlugin {
             if (node.name === 'svg') {
               if (!node.children || node.children.length <= 0) return
 
-              const pathElements = node.children.filter(
-                (v) => (v as any).name === 'path'
-              )
+              const elements = node.children.filter(
+                (v) => v.type === 'element'
+              ) as XastElement[]
+
+              const pathElements = elements.filter((v) => v.name === 'path')
 
               if (pathElements.length <= 0) return
 
               const allPathFillValue = pathElements
-                .map((v) => (v as any).attributes?.fill)
+                .map((v) => v.attributes?.fill)
                 .filter((fillValue) => !!fillValue)
 
               const hasPathFill = allPathFillValue.length > 0
@@ -32,7 +35,7 @@ export default function (): CustomPlugin {
                 node.attributes.fill = allPathFillValue[0]
 
                 pathElements.forEach((v) => {
-                  delete (v as any).attributes.fill
+                  delete v.attributes.fill
                 })
               }
             }

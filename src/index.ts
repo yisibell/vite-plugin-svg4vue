@@ -2,6 +2,7 @@ import compileSvg from './compileSvg'
 import optimizeSvg from './optimizeSvg'
 import { readFileSync } from 'fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
+import createSvgoConfig from './createSvgoConfig'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
@@ -10,6 +11,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     assetsDirName = 'icons',
     enableBuildCache = true,
     enableMonochromeSvgOptimize = true,
+    enableSvgSizeResponsive = true,
   } = options
 
   const cache = new Map()
@@ -19,6 +21,11 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   )
 
   let isBuild = false
+
+  const finalSvgoConfig = createSvgoConfig(svgoConfig, {
+    movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
+    responsiveSVGSize: enableSvgSizeResponsive,
+  })
 
   return {
     name: 'vite-plugin-svg4vue',
@@ -49,9 +56,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           if (!result) {
             const code = readFileSync(idWithoutQuery, 'utf8')
 
-            const svg = await optimizeSvg(code, idWithoutQuery, svgoConfig, {
-              movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
-            })
+            const svg = await optimizeSvg(code, idWithoutQuery, finalSvgoConfig)
 
             result = await compileSvg(svg, idWithoutQuery)
 
