@@ -21,15 +21,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - run: npm i -g pnpm
+      # using yarn to install deps
+      - run: npm i -g yarn
 
-      - run: pnpm install
-
-      - run: pnpm run compile
+      - run: yarn install
       
       # build to static
       - name: Build Example
-        run: pnpn run build-only
+        run: yarn build-only
         working-directory: example
 
       # deploy to `docs` branch
