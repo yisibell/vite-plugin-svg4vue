@@ -27,7 +27,7 @@ jobs:
       
       # build to static
       - name: Build Example
-        run: yarn build
+        run: yarn build-only
         working-directory: example
 
       # deploy to `docs` branch
