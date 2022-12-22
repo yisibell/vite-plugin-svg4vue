@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - release/*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Set a Node.js version
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # pull code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # using yarn to install deps
+      - run: npm i -g yarn
+      - run: yarn install
+      
+      # build to static
+      - name: Build Example
+        run: yarn build
+        working-directory: example
+
+      # deploy to `docs` branch
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: example/dist
+          silent: true
+          clean: true
+          branch: docs
+          single-commit: true
