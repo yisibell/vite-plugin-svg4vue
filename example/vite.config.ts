@@ -7,7 +7,7 @@ import { svg4VuePlugin } from 'vite-plugin-svg4vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '',
+  base: '/vite-plugin-svg4vue/',
   plugins: [
     vue(),
     svg4VuePlugin({
