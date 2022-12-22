@@ -2,6 +2,8 @@
 
 A vite plugin which can transform svg icon to vue component.
 
+see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Example and docs</a>.
+
 # Features
 
 - [SVGO](https://github.com/svg/svgo) optimization.
