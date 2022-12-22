@@ -1,91 +1,77 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <div id="container">
+    <header class="mb-36">
+      <h1>vite-plugin-svg4vue</h1>
+      <p>
+        A vite plugin which can transform svg icon to vue component. Support
+        custom svg color and size.
+      </p>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <a
+        class="button--primary mr-12"
+        href="https://github.com/yisibell/vite-plugin-svg4vue"
+        target="_blank"
+      >
+        <GithubIcon />
+        GitHub
+      </a>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <a
+        class="button--primary"
+        href="https://github.com/yisibell/vite-plugin-svg4vue/blob/main/CHANGELOG.md"
+        target="_blank"
+      >
+        <ChangeLogIcon />
+        ChangeLog
+      </a>
 
-  <RouterView />
+      <h2>Usage</h2>
+
+      <h3>Installation</h3>
+      <pre class="language-bash"><code>{{ installDemoCode }}</code></pre>
+
+      <h3>Setup</h3>
+
+      <h4>
+        1. Config into the <code class="inline-code">vite.config.ts</code>.
+      </h4>
+
+      <pre
+        class="language-js"
+      > <code v-html="setupPluginCodeHtml"></code> </pre>
+
+      <h4>
+        2. Create a folder named <code class="inline-code">icons</code> to place
+        your svg icons.
+      </h4>
+    </header>
+
+    <RouterView />
+  </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
+import { highlight, languages } from 'prismjs'
+
+import installDemoCode from '@/assets/demo/installCode.bash?raw'
+import setupPluginCode from '@/assets/demo/setupPluginCode.ts?raw'
+
+import GithubIcon from '@/icons/github.svg?component'
+import ChangeLogIcon from '@/icons/changelog.svg?component'
+
+const setupPluginCodeHtml = highlight(
+  setupPluginCode,
+  languages.javascript,
+  'javascript'
+)
+</script>
+
+<style lang="scss" scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  p {
+    font-size: 18px;
+    padding: 12px 0;
   }
 }
 </style>

@@ -1,86 +1,111 @@
-<script setup lang="ts">
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-</script>
-
 <template>
   <WelcomeItem>
     <template #icon>
-      <DocumentationIcon />
+      <OptimizeIcon font-size="24" />
     </template>
-    <template #heading>Documentation</template>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
+    <template #heading>SVGO Optimization</template>
+
+    the <b class="green">vite-plugin-svg4vue</b> use
+
+    <a href="https://github.com/svg/svgo" target="_blank" rel="noopener">
+      SVGO
+    </a>
+
+    optimize your svg icons. and you aslo can custom <b class="green">SVGO</b>'s
+    config via
+
+    <a
+      href="https://github.com/yisibell/vite-plugin-svg4vue#options"
+      target="_blank"
+    >
+      svgoConfig
+    </a>
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <ToolingIcon />
+      <HmrIcon font-size="24" />
     </template>
-    <template #heading>Tooling</template>
+    <template #heading>HMR</template>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank">Cypress Component Testing</a>.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
+    Hot Module Replacement support.
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <EcosystemIcon />
+      <CategoryIcon font-size="24" />
     </template>
-    <template #heading>Ecosystem</template>
+    <template #heading>Query String Support</template>
 
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
+    <div class="mb-12">
+      Support for
+      <code class="inline-code">?url</code>
+      and <code class="inline-code">?component</code> query string.
+    </div>
+
+    <h3 class="py-10">1. with <code>?component</code></h3>
+    <pre
+      class="language-markup"
+    ><code>{{ UseWithComponentDemoCode }}</code></pre>
+    <b class="mr-10">result:</b> <UseWithComponentDemo />
+
+    <h3 class="py-10">2. with <code>?url</code></h3>
+    <pre class="language-markup"><code>{{ UseWithUrlDemoCode }}</code></pre>
+    <b class="mr-10">result:</b> <UseWithUrlDemo />
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <CommunityIcon />
+      <ColorIcon font-size="24" />
     </template>
-    <template #heading>Community</template>
+    <template #heading>Custom Color </template>
 
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
+    <div>
+      Support custom svg icon (monochrome) color with
+      <code class="inline-code">fill</code> attribute.
+    </div>
+
+    <pre class="language-markup"><code>{{ UseFillDemoCode }}</code></pre>
+
+    <b class="mr-10">result:</b> <UseFillDemo />
   </WelcomeItem>
 
   <WelcomeItem>
     <template #icon>
-      <SupportIcon />
+      <SizeIcon font-size="24" />
     </template>
-    <template #heading>Support Vue</template>
+    <template #heading>Custom Size</template>
 
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
+    <div>
+      You can change the svg icon size with
+      <code class="inline-code">font-size</code> or
+      <code class="inline-code">width</code>. both of this will be responsive.
+    </div>
+
+    <pre class="language-markup"><code>{{ UseFontSizeDemoCode }}</code></pre>
+
+    <b class="mr-10">result:</b> <UseFontSizeDemo />
   </WelcomeItem>
 </template>
+
+<script setup lang="ts">
+import WelcomeItem from './WelcomeItem.vue'
+import OptimizeIcon from '@/icons/optimize.svg?component'
+import HmrIcon from '@/icons/hmr.svg?component'
+import CategoryIcon from '@/icons/category.svg?component'
+import ColorIcon from '@/icons/color.svg?component'
+import SizeIcon from '@/icons/size.svg?component'
+
+import UseWithComponentDemo from '@/assets/demo/useWithComponent.vue'
+import UseWithComponentDemoCode from '@/assets/demo/useWithComponent.vue?raw'
+
+import UseWithUrlDemo from '@/assets/demo/useWithUrl.vue'
+import UseWithUrlDemoCode from '@/assets/demo/useWithUrl.vue?raw'
+
+import UseFillDemo from '@/assets/demo/useFill.vue'
+import UseFillDemoCode from '@/assets/demo/useFill.vue?raw'
+
+import UseFontSizeDemo from '@/assets/demo/UseFontSize.vue'
+import UseFontSizeDemoCode from '@/assets/demo/UseFontSize.vue?raw'
+</script>

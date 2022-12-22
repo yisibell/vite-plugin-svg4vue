@@ -36,6 +36,10 @@
   --section-gap: 160px;
 }
 
+:root {
+  --theme-primary-color: hsla(160, 100%, 37%, 1);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);

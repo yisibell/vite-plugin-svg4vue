@@ -1,0 +1,84 @@
+@import './base.scss';
+
+#app {
+  #container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+
+    h1 {
+      font-size: 46px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+  
+    h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+  
+    h3 {
+      font-size: 28px;
+    }
+  }
+}
+
+.button {
+  &--primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    color: var(--theme-primary-color);
+    border: 1px solid var(--theme-primary-color);
+    border-radius: 4px;
+    outline: none;
+    text-decoration: none;
+    transition: all .15s;
+  
+    &:visited {
+      color: var(--theme-primary-color);
+    }
+  
+    &:hover,
+    &:focus-visible {
+      color: #fff;
+      background: var(--theme-primary-color);
+  
+      svg {
+        fill: #fff;
+      }
+    }
+  
+    & > svg {
+      font-size: 24px;
+      fill:  var(--theme-primary-color);
+  
+  
+    }
+  }
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: var(--theme-primary-color);
+  transition: 0.4s;
+}
+
+.inline-code {
+  display: inline-block;
+  background-color: var(--theme-primary-color);
+  color: #fff;
+  font-size: 12px;
+  padding: 0px 6px;
+  border-radius: 4px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
