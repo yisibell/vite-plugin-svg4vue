@@ -24,11 +24,9 @@ jobs:
       # using yarn to install deps
       - run: npm i -g yarn
 
-      - run: yarn install
-      
       # build to static
       - name: Build Example
-        run: yarn build-only
+        run: yarn install && yarn build-only
         working-directory: example
 
       # deploy to `docs` branch
