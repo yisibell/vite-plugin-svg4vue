@@ -15,12 +15,7 @@
     optimize your svg icons. and you aslo can custom <b class="green">SVGO</b>'s
     config via
 
-    <a
-      href="https://github.com/yisibell/vite-plugin-svg4vue#options"
-      target="_blank"
-    >
-      svgoConfig
-    </a>
+    <PluginConfigLink> svgoConfig </PluginConfigLink>
   </WelcomeItem>
 
   <WelcomeItem>
@@ -90,6 +85,7 @@
 </template>
 
 <script setup lang="ts">
+import PluginConfigLink from './PluginConfigLink.vue'
 import WelcomeItem from './WelcomeItem.vue'
 import OptimizeIcon from '@/icons/optimize.svg?component'
 import HmrIcon from '@/icons/hmr.svg?component'

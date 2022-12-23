@@ -36,14 +36,25 @@
         1. Config into the <code class="inline-code">vite.config.ts</code>.
       </h4>
 
-      <pre
-        class="language-js"
-      > <code v-html="setupPluginCodeHtml"></code> </pre>
+      <pre><code class="language-js" v-html="setupPluginCodeHtml"></code></pre>
 
       <h4>
         2. Create a folder named <code class="inline-code">icons</code> to place
-        your svg icons.
+        your svg icons, and you can change the dir via
+        <PluginConfigLink text="assetsDirName" /> .
       </h4>
+
+      <h4>
+        3. All configuration items can be found here <PluginConfigLink /> .
+      </h4>
+
+      <h4>
+        4. If you are using TypeScript,
+        <code class="inline-code">vite-plugin-svg4vue/client</code> can be added
+        to <code>d.ts</code> declaration file.
+      </h4>
+
+      <pre><code class="language-js" v-html="ClientDtsRawHtml"></code></pre>
     </header>
 
     <RouterView />
@@ -54,14 +65,24 @@
 import { RouterView } from 'vue-router'
 import { highlight, languages } from 'prismjs'
 
+import PluginConfigLink from '@/components/PluginConfigLink.vue'
+
 import installDemoCode from '@/assets/demo/installCode.bash?raw'
 import setupPluginCode from '@/assets/demo/setupPluginCode.ts?raw'
 
 import GithubIcon from '@/icons/github.svg?component'
 import ChangeLogIcon from '@/icons/changelog.svg?component'
 
+import ClientDtsRaw from '@/assets/demo/client.d.ts?raw'
+
 const setupPluginCodeHtml = highlight(
   setupPluginCode,
+  languages.javascript,
+  'javascript'
+)
+
+const ClientDtsRawHtml = highlight(
+  ClientDtsRaw,
   languages.javascript,
   'javascript'
 )
@@ -69,6 +90,9 @@ const setupPluginCodeHtml = highlight(
 
 <style lang="scss" scoped>
 header {
+  h4 {
+    line-height: 36px;
+  }
   p {
     font-size: 18px;
     padding: 12px 0;

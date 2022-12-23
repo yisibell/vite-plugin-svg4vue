@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .item {
   margin-top: 2rem;
   display: flex;
@@ -31,6 +31,12 @@ i {
   height: 32px;
 
   color: var(--color-text);
+
+  :deep() {
+    svg {
+      fill: var(--theme-primary-color);
+    }
+  }
 }
 
 h3 {
