@@ -1,6 +1,8 @@
 # vite-plugin-svg4vue
 
-A vite plugin which can transform svg icon to vue component.
+A `vite (3.x || 4.x)` plugin which can transform `svg` icon to `vue (3.x)` component.
+
+> this plugin dependencies on `vue/compiler-sfc`, so keep your `vue` version to **3.2.13+**.
 
 see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Example and docs</a>.
 
@@ -15,6 +17,9 @@ see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Examp
 # Installation
 
 ```bash
+# pnpm
+$ pnpm i vite-plugin-svg4vue -D
+
 # yarn
 $ yarn add vite-plugin-svg4vue --dev
 
@@ -40,6 +45,12 @@ export default defineConfig({
 })
 ```
 
+If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts declaration file.
+
+``` ts
+/// <reference types="vite-plugin-svg4vue/client" />
+```
+
 ## Options
 
 | property | Default value | Description |
@@ -56,25 +67,21 @@ export default defineConfig({
 
 ```vue
 <template>
-  <div class="about">
-    <div>
-      <h1>This is an about page</h1>
+  <div>
+    <h2>svg component</h2>
 
-      <h2>svg component</h2>
+    <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
+    <LogoSvg fill="red" />
 
-      <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
-      <LogoSvg fill="red" />
+    <!-- you can change the svg icon size with `font-size` or `width`. both of this will be responsive -->
+    <LogoSvg font-size="48" />
+    <LogoSvg width="48" />
 
-      <!-- you can change the svg icon size with `font-size` or `width`. both of this will be responsive -->
-      <LogoSvg font-size="48" />
-      <LogoSvg width="48" />
+    <h2>svg url</h2>
 
-      <h2>svg url</h2>
-
-      <p>
-        <img :src="logoSvgUrl" alt="" width="36" />
-      </p>
-    </div>
+    <p>
+      <img :src="logoSvgUrl" alt="" width="36" />
+    </p>
   </div>
 </template>
 
@@ -94,12 +101,6 @@ export default defineComponent({
   },
 })
 </script>
-```
-
-If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts declaration file.
-
-``` ts
-/// <reference types="vite-plugin-svg4vue/client" />
 ```
 
 # Change Log
