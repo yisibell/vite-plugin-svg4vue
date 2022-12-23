@@ -53,7 +53,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
 
 ## Options
 
-| property | Default value | Description |
+| Key | Default value | Description |
 | :---: | :---: | :---: |
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
