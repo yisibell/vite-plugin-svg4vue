@@ -5,7 +5,7 @@ import dts from 'rollup-plugin-dts'
 export default [
   {
     input: 'src/index.ts',
-    external: ['@vue/compiler-sfc'],
+    external: ['vue', '@vue/compiler-sfc', 'svgo'],
     plugins: [
       commonjs(),
       typescript(), // so Rollup can convert TypeScript to JavaScript
