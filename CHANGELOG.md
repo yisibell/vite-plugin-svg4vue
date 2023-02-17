@@ -1,5 +1,20 @@
 # CHANGE LOG
 
+## v2.1.6
+
+
+### 📦 Build
+
+  - Upgrade rollup config for load json file (c2c4ebc)
+
+### 🏡 Chore
+
+  - Update readme docs (bdfab83)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## 2.1.0 (2022-12-21)
 
 **Upgrade**
