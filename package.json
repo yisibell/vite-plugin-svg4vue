@@ -13,7 +13,7 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "release": "npm publish --access=public"
+    "release": "npm run build && changelogen --release && npm publish --access=public && git push --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
+    "changelogen": "^0.4.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",

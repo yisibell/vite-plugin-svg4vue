@@ -105,4 +105,8 @@ export default defineComponent({
 
 # Change Log
 
-see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>
+see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
+
+# Framework Support
+
+- **Nuxt**: see <a href="https://github.com/yisibell/nuxt-svg-icons" target="_blank">nuxt-svg-icons</a>.
