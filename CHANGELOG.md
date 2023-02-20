@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.2.1
+
+
+### 🩹 Fixes
+
+  - Raw svg compile error (7f437be)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.2.0
 
 
