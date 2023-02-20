@@ -3,6 +3,7 @@ import optimizeSvg from './optimizeSvg'
 import { readFileSync } from 'fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
 import createSvgoConfig from './createSvgoConfig'
+import compileSvgToRaw from './compileSvgToRaw'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
@@ -49,11 +50,11 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           let cachedSvgRawResult = svgRawCache.get(idWithoutQuery)
 
           if (!cachedSvgRawResult) {
-            cachedSvgRawResult = await optimizeSvg(
-              source,
-              idWithoutQuery,
-              finalSvgoConfig
-            )
+            const code = readFileSync(idWithoutQuery, 'utf8')
+
+            const svg = await optimizeSvg(code, idWithoutQuery, finalSvgoConfig)
+
+            cachedSvgRawResult = compileSvgToRaw(svg)
 
             if (enableBuildCache && isBuild) {
               svgRawCache.set(idWithoutQuery, cachedSvgRawResult)
