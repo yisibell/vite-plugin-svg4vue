@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.2.0
+
+
+### 🚀 Enhancements
+
+  - Support raw svg optimize (70adae7)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.1.6
 
 
