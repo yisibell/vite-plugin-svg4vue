@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.2.2
+
+
+### 🏡 Chore
+
+  - **example:** Update example (fb8f68a)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.2.1
 
 
