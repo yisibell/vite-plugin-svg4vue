@@ -10,7 +10,7 @@ see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Examp
 
 - [SVGO](https://github.com/svg/svgo) optimization.
 - Hot Module Replacement support.
-- Support for `?url` and `?component` query string.
+- Support for `?url` , `?component` and `?raw` query string.
 - Support custom svg icon (monochrome) color with `fill` attribute.
 - Support change svg icon size with `font-size` and it will be responsive.
 
@@ -56,7 +56,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
 | Key | Default value | Description |
 | :---: | :---: | :---: |
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
-| `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` and `component` |
+| `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` |
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |
 | `enableMonochromeSvgOptimize` | `true` | Whether to enable monochrome svg icon optimize which can move `fill` attribute value to parent node (svg element). So that you can change the svg icon color with `fill`. |
@@ -103,7 +103,7 @@ export default defineComponent({
 </script>
 ```
 
-# Change Log
+# CHANGE LOG
 
 see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
 

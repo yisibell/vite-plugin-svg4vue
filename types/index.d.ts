@@ -3,7 +3,7 @@ import type { Plugin as VitePlugin } from 'vite'
 
 interface Svg4VuePluginOptions {
   svgoConfig?: SvgoConfig
-  defaultExport?: string
+  defaultExport?: 'url' | 'raw' | 'component'
   assetsDirName?: string
   enableBuildCache?: boolean
   enableMonochromeSvgOptimize?: boolean

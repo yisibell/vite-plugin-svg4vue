@@ -48,6 +48,10 @@
     <h3 class="py-10">2. with <code>?url</code></h3>
     <pre class="language-markup"><code>{{ UseWithUrlDemoCode }}</code></pre>
     <b class="mr-10">result:</b> <UseWithUrlDemo />
+
+    <h3 class="py-10">3. with <code>?raw</code></h3>
+    <pre class="language-markup"><code>{{ UseWithRawDemoCode }}</code></pre>
+    <b class="mr-10">result:</b> <UseWithRawDemo />
   </WelcomeItem>
 
   <WelcomeItem>
@@ -98,6 +102,9 @@ import UseWithComponentDemoCode from '@/assets/demo/useWithComponent.vue?raw'
 
 import UseWithUrlDemo from '@/assets/demo/useWithUrl.vue'
 import UseWithUrlDemoCode from '@/assets/demo/useWithUrl.vue?raw'
+
+import UseWithRawDemo from '@/assets/demo/UseWithRaw.vue'
+import UseWithRawDemoCode from '@/assets/demo/UseWithRaw.vue?raw'
 
 import UseFillDemo from '@/assets/demo/useFill.vue'
 import UseFillDemoCode from '@/assets/demo/useFill.vue?raw'
