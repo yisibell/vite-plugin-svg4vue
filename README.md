@@ -18,7 +18,7 @@ see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Examp
 
 ```bash
 # pnpm
-$ pnpm i vite-plugin-svg4vue -D
+$ pnpm add vite-plugin-svg4vue -D
 
 # yarn
 $ yarn add vite-plugin-svg4vue --dev
