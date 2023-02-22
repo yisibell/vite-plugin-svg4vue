@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.3.0
+
+
+### 🚀 Enhancements
+
+  - Support optimize svg stroke attribute so that you can change a outline svg color (ba88849)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.2.2
 
 
