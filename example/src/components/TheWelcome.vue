@@ -122,7 +122,7 @@ import UseFillDemo from '@/assets/demo/useFill.vue'
 import UseFillDemoCode from '@/assets/demo/useFill.vue?raw'
 
 import UseFillAndStrokeDemo from '@/assets/demo/UseFillAndStroke.vue'
-import UseFillAndStrokeDemoCode from '@/assets/demo/useFillAndStroke.vue?raw'
+import UseFillAndStrokeDemoCode from '@/assets/demo/UseFillAndStroke.vue?raw'
 
 import UseFontSizeDemo from '@/assets/demo/UseFontSize.vue'
 import UseFontSizeDemoCode from '@/assets/demo/UseFontSize.vue?raw'
