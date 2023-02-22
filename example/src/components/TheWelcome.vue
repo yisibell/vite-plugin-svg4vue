@@ -61,13 +61,25 @@
     <template #heading>Custom Color </template>
 
     <div>
-      Support custom svg icon (monochrome) color with
+      1. Support custom svg icon (monochrome) color with
       <code class="inline-code">fill</code> attribute.
     </div>
 
     <pre class="language-markup"><code>{{ UseFillDemoCode }}</code></pre>
 
     <b class="mr-10">result:</b> <UseFillDemo />
+
+    <div>
+      2. Support custom svg icon (monochrome) color with
+      <code class="inline-code">fill</code> and
+      <code class="inline-code">stroke</code> attribute.
+    </div>
+
+    <pre
+      class="language-markup"
+    ><code>{{ UseFillAndStrokeDemoCode }}</code></pre>
+
+    <b class="mr-10">result:</b> <UseFillAndStrokeDemo />
   </WelcomeItem>
 
   <WelcomeItem>
@@ -108,6 +120,9 @@ import UseWithRawDemoCode from '@/assets/demo/UseWithRaw.vue?raw'
 
 import UseFillDemo from '@/assets/demo/useFill.vue'
 import UseFillDemoCode from '@/assets/demo/useFill.vue?raw'
+
+import UseFillAndStrokeDemo from '@/assets/demo/UseFillAndStroke.vue'
+import UseFillAndStrokeDemoCode from '@/assets/demo/useFillAndStroke.vue?raw'
 
 import UseFontSizeDemo from '@/assets/demo/UseFontSize.vue'
 import UseFontSizeDemoCode from '@/assets/demo/UseFontSize.vue?raw'

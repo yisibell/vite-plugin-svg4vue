@@ -1,8 +1,10 @@
 import type { Config as SvgoConfig } from 'svgo'
-import movePathFillAttrToSvgNode from './svgo-plugins/movePathFillAttrToSvgNode'
+import moveChildAttrToSvgElement from './svgo-plugins/moveChildAttrToSvgElement'
 import responsiveSVGSize from './svgo-plugins/responsiveSVGSize'
 
 export interface OptimizeSvgExtraOptions {
+  /** whether to enable moveStrokeAttrToSvgNode plugin */
+  moveStrokeAttrToSvgNode?: boolean
   /** whether to enable movePathFillAttrToSvgNode plugin */
   movePathFillAttrToSvgNode?: boolean
   /** whether to enable responsiveSVGSize plugin */
@@ -17,8 +19,17 @@ export default function (
 
   finalSvgoConfig.plugins = ['preset-default']
 
+  if (extraOptions.moveStrokeAttrToSvgNode) {
+    finalSvgoConfig.plugins.push(
+      moveChildAttrToSvgElement('moveStrokeAttrToSvgNode', {
+        targetChildElementNames: ['path'],
+        targetChildElementAttributes: ['stroke'],
+      })
+    )
+  }
+
   if (extraOptions.movePathFillAttrToSvgNode) {
-    finalSvgoConfig.plugins.push(movePathFillAttrToSvgNode())
+    finalSvgoConfig.plugins.push(moveChildAttrToSvgElement())
   }
 
   if (responsiveSVGSize) {

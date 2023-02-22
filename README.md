@@ -59,7 +59,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` |
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |
-| `enableMonochromeSvgOptimize` | `true` | Whether to enable monochrome svg icon optimize which can move `fill` attribute value to parent node (svg element). So that you can change the svg icon color with `fill`. |
+| `enableMonochromeSvgOptimize` | `true` | Whether to enable monochrome svg icon optimize which can move child node (named **path**) 's `fill` and `stroke` attribute to its parent node (svg element). So that you can change the svg icon color with `fill` and `stroke`. |
 | `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive  |
 
 

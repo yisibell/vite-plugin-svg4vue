@@ -25,6 +25,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   let isBuild = false
 
   const finalSvgoConfig = createSvgoConfig(svgoConfig, {
+    moveStrokeAttrToSvgNode: enableMonochromeSvgOptimize,
     movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
     responsiveSVGSize: enableSvgSizeResponsive,
   })
