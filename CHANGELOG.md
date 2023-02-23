@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.5.1
+
+
+### 🩹 Fixes
+
+  - Add css vars error (7ccce52)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.5.0
 
 
