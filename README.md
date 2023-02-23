@@ -1,3 +1,13 @@
+<p align="center">
+  <a href="https://www.npmjs.org/package/vite-plugin-svg4vue">
+    <img src="https://img.shields.io/npm/v/vite-plugin-svg4vue.svg">
+  </a>
+  <a href="https://npmcharts.com/compare/vite-plugin-svg4vue?minimal=true">
+    <img src="https://img.shields.io/npm/dm/vite-plugin-svg4vue.svg">
+  </a>
+  <br>
+</p>
+
 # vite-plugin-svg4vue
 
 A `vite (3.x || 4.x)` plugin which can transform `svg` icon to `vue (3.x)` component.
@@ -119,4 +129,4 @@ see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
 
 # Framework Support
 
-- **Nuxt**: see <a href="https://github.com/yisibell/nuxt-svg-icons" target="_blank">nuxt-svg-icons</a>.
+- **Nuxt**: see <a href="https://github.com/yisibell/vite-plugin-svg4vue" target="_blank">vite-plugin-svg4vue</a>.
