@@ -14,7 +14,12 @@
         Select a color:
         <input type="color" v-model="color2" />
       </label>
-      <PathInGFillMonochromeSvg :fill="color2" width="533" height="531" />
+
+      <!-- Just in case, it records the original size of the svg as a css variable. So, you can easily apply its original size -->
+      <PathInGFillMonochromeSvg
+        :fill="color2"
+        style="width: var(--svg-origin-width); height: var(--svg-origin-height)"
+      />
     </div>
   </div>
 </template>
