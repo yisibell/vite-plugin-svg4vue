@@ -1,5 +1,21 @@
 # CHANGE LOG
 
+## v2.5.0
+
+
+### 🚀 Enhancements
+
+  - Add origin size with unit css vars (2dd2453)
+
+### 🏡 Chore
+
+  - **docs:** Update readme (9e274b2)
+  - **example:** Update example (b402604)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.4.0
 
 
