@@ -60,8 +60,30 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |
 | `enableMonochromeSvgOptimize` | `true` | Whether to enable **monochrome** svg icon optimize which can move child node (named **path**, Even the **path** wrapped by **g**) 's `fill`, `fill-opacity` and `stroke`, `stroke-opacity` attribute to its parent node (**svg** element). So that you can change the svg icon color with `fill` and `stroke`. |
-| `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive  |
+| `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive.  |
 
+
+### What `enableSvgSizeResponsive` do ?
+
+In fact, for the **svg** node, **vite-plugin-svg4vue** will set the `width` value to `font-size`, remove svg `height` and set `width` to `1em`, so that the **svg** size will be **responsive** and you can manipulate it's size with `font-size`.
+
+Just in case, it records the **original size** of the **svg** as a **css variables**:
+
+``` html
+<svg style="--svg-origin-width: ${origin width}; --svg-origin-height: ${origin height};"></svg>
+```
+
+So, you can easily apply its original size.
+
+```vue
+<template>
+  <LogoSvg fill="red" style="width: var(--svg-origin-width); height: var(--svg-origin-height)" />
+</template>
+
+<script setup lang="ts">
+import LogoSvg from '@/icons/logo.svg?component'
+</script>
+```
 
 ## In Vue
 
@@ -85,21 +107,9 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import LogoSvg from '@/icons/logo.svg?component'
 import logoSvgUrl from '@/icons/logo.svg?url'
-
-export default defineComponent({
-  components: {
-    LogoSvg,
-  },
-  setup() {
-    return {
-      logoSvgUrl,
-    }
-  },
-})
 </script>
 ```
 
