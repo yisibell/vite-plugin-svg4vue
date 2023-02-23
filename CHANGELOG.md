@@ -1,5 +1,22 @@
 # CHANGE LOG
 
+## v2.4.0
+
+
+### 🚀 Enhancements
+
+  - Support modifying fill-opacity and stroke-opacity on the svg node (5252255)
+
+### 🏡 Chore
+
+  - **example:** Update example (585ae02)
+  - **docs:** Update readme (3282e0c)
+  - **example:** Fix example deploy error (dcad7b9)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.3.1
 
 
