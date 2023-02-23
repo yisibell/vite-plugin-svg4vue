@@ -75,9 +75,9 @@
       <code class="inline-code">stroke</code> attribute.
     </div>
 
-    <pre
-      class="language-markup"
-    ><code>{{ UseFillAndStrokeDemoCode }}</code></pre>
+    <pre class="language-markup">
+      <code>{{ UseFillAndStrokeDemoCode }}</code>
+    </pre>
 
     <b class="mr-10">result:</b> <UseFillAndStrokeDemo />
   </WelcomeItem>

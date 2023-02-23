@@ -1,7 +1,8 @@
 import type { CustomPlugin } from 'svgo'
-import type { XastElement } from 'svgo/lib/types'
+import type { XastElement, XastChild } from 'svgo/lib/types'
 
 export interface MoveChildAttrToSvgElementOptions {
+  wrapperElementNames?: string[]
   targetChildElementNames?: string[]
   targetChildElementAttributes?: string[]
 }
@@ -31,6 +32,38 @@ export const moveAttrToSvgNode = (
   }
 }
 
+export const createTargetElements = (
+  nodes: XastChild[],
+  targetChildElementNames: string[],
+  wrapperElementNames: string[],
+  res: XastElement[] = []
+) => {
+  const elements = nodes.filter(
+    (v) =>
+      v.type === 'element' &&
+      (targetChildElementNames.includes(v.name) ||
+        (wrapperElementNames.length > 0 &&
+          wrapperElementNames.includes(v.name)))
+  ) as XastElement[]
+
+  elements.forEach((v) => {
+    if (targetChildElementNames.includes(v.name)) {
+      res.push(v)
+    }
+
+    if (v.children && v.children.length > 0) {
+      createTargetElements(
+        v.children,
+        targetChildElementNames,
+        wrapperElementNames,
+        res
+      )
+    }
+  })
+
+  return res
+}
+
 /**
  * move child element attribute to it's parent node (svg) when the children elements are monochrome.
  */
@@ -40,8 +73,9 @@ export default function (
 ): CustomPlugin {
   const finalOption = Object.assign(
     {
+      wrapperElementNames: ['g'],
       targetChildElementNames: ['path'],
-      targetChildElementAttributes: ['fill'],
+      targetChildElementAttributes: ['fill', 'fill-opacity'],
     },
     option
   )
@@ -55,12 +89,10 @@ export default function (
             if (node.name === 'svg') {
               if (!node.children || node.children.length <= 0) return
 
-              const elements = node.children.filter(
-                (v) => v.type === 'element'
-              ) as XastElement[]
-
-              const targetElements = elements.filter((v) =>
-                finalOption.targetChildElementNames.includes(v.name)
+              const targetElements = createTargetElements(
+                node.children,
+                finalOption.targetChildElementNames,
+                finalOption.wrapperElementNames
               )
 
               finalOption.targetChildElementAttributes.forEach((attrName) => {

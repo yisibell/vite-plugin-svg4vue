@@ -23,7 +23,7 @@ export default function (
     finalSvgoConfig.plugins.push(
       moveChildAttrToSvgElement('moveStrokeAttrToSvgNode', {
         targetChildElementNames: ['path'],
-        targetChildElementAttributes: ['stroke'],
+        targetChildElementAttributes: ['stroke', 'stroke-opacity'],
       })
     )
   }

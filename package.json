@@ -20,10 +20,13 @@
     "url": "git+https://github.com/yisibell/vite-plugin-svg4vue.git"
   },
   "keywords": [
+    "vite",
     "vite-plugin",
     "vue",
     "svg",
-    "svg-component"
+    "svg-component",
+    "svg-icon",
+    "icon"
   ],
   "author": {
     "name": "elenh",
@@ -57,6 +60,6 @@
   },
   "peerDependencies": {
     "vite": "^3.0.0 || ^4.0.2",
-    "vue": "^3.2.45"
+    "vue": "^2.7.14 || ^3.2.45"
   }
 }

@@ -1,4 +1,9 @@
 import type { CustomPlugin } from 'svgo'
+import type { XastElement } from 'svgo/lib/types'
+
+export const setAttr = (node: XastElement, name: string, value: string) => {
+  node.attributes[name] = value
+}
 
 /**
  * change svg width attribute to 1em, remove svg height attribute and set `font-szie` to svg node's `width`.
@@ -12,11 +17,22 @@ export default function (): CustomPlugin {
         element: {
           enter(node) {
             if (node.name === 'svg') {
-              const { width } = node.attributes
+              const { width, height, style } = node.attributes
 
-              width && (node.attributes['font-size'] = width)
+              const addStyle = `--svg-origin-width: ${width};--svg-origin-height: ${height};`
 
-              node.attributes.width = '1em'
+              const styleValue = style ? `${addStyle}${style}` : addStyle
+
+              setAttr(node, 'style', styleValue)
+
+              setAttr(node, 'data-svg-origin-width', width)
+              setAttr(node, 'data-svg-origin-height', height)
+
+              if (width) {
+                setAttr(node, 'font-size', width)
+              }
+
+              setAttr(node, 'width', '1em')
 
               delete node.attributes.height
             }
