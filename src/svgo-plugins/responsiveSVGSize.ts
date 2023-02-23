@@ -22,8 +22,7 @@ export default function (): CustomPlugin {
               const wNumber = Number.parseFloat(width)
               const hNumber = Number.parseFloat(height)
 
-              const addStyle = `--svg-origin-width: ${wNumber};--svg-origin-height: ${hNumber}; 
-              --svg-origin-width--with-unit: ${wNumber}px; --svg-origin-height--with-unit: ${hNumber}px;`
+              const addStyle = `--svg-origin-width: ${wNumber};--svg-origin-height: ${hNumber};--svg-origin-width--with-unit: ${wNumber}px;--svg-origin-height--with-unit: ${hNumber}px;`
 
               const styleValue = style ? `${addStyle}${style}` : addStyle
 
