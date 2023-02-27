@@ -1,6 +1,5 @@
 import type { Config as SvgoConfig } from 'svgo'
-import moveChildAttrToSvgElement from './svgo-plugins/moveChildAttrToSvgElement'
-import responsiveSVGSize from './svgo-plugins/responsiveSVGSize'
+import { moveChildAttrToSVGElement, responsiveSVGSize } from 'svgo-extra'
 
 export interface OptimizeSvgExtraOptions {
   /** whether to enable moveStrokeAttrToSvgNode plugin */
@@ -21,7 +20,7 @@ export default function (
 
   if (extraOptions.moveStrokeAttrToSvgNode) {
     finalSvgoConfig.plugins.push(
-      moveChildAttrToSvgElement('moveStrokeAttrToSvgNode', {
+      moveChildAttrToSVGElement('moveStrokeAttrToSVGNode', {
         targetChildElementNames: ['path'],
         targetChildElementAttributes: ['stroke', 'stroke-opacity'],
       })
@@ -29,7 +28,7 @@ export default function (
   }
 
   if (extraOptions.movePathFillAttrToSvgNode) {
-    finalSvgoConfig.plugins.push(moveChildAttrToSvgElement())
+    finalSvgoConfig.plugins.push(moveChildAttrToSVGElement())
   }
 
   if (responsiveSVGSize) {
