@@ -1,5 +1,20 @@
 # CHANGE LOG
 
+## v2.6.0
+
+
+### 🚀 Enhancements
+
+  - **svgo-plugins:** Move built-in svgo plugins into svgo-extra (6bbbda6)
+
+### 🏡 Chore
+
+  - **docs:** Update readme (43ad361)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.5.1
 
 
