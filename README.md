@@ -10,9 +10,9 @@
 
 # vite-plugin-svg4vue
 
-A `vite (3.x || 4.x)` plugin which can transform `svg` icon to `vue (3.x)` component.
+A `vite (3.x || 4.x)` plugin which can transform `SVG` icon to `vue (2.7.X || 3.x)` component.
 
-> this plugin dependencies on `vue/compiler-sfc`, so keep your `vue` version to **3.2.13+**.
+> this plugin dependencies on `vue/compiler-sfc`, so keep your `vue` version to **3.2.13+** or **2.7.14+**.
 
 see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Example and docs</a>.
 
@@ -56,6 +56,41 @@ export default defineConfig({
 })
 ```
 
+## In Vue
+
+```vue
+<template>
+  <div>
+    <h2>SVG component: </h2>
+
+    <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
+    <LogoSvg fill="red" />
+
+    <!-- you can change the svg icon size with `font-size` or `width`. both of this will be responsive -->
+    <LogoSvg font-size="48" />
+    <LogoSvg width="48" />
+
+    <h2>SVG url: </h2>
+
+    <p>
+      <img :src="logoSvgUrl" alt="" width="36" />
+    </p>
+
+    <h2>SVG raw: </h2>
+
+    <p>
+      <span v-html="logoSvgRaw"></span>
+    </p>
+  </div>
+</template>
+
+<script setup lang="ts">
+import LogoSvg from '@/icons/logo.svg?component'
+import logoSvgUrl from '@/icons/logo.svg?url'
+import logoSvgRaw from '@/icons/logo.svg?raw'
+</script>
+```
+
 If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.ts` declaration file.
 
 ``` ts
@@ -93,41 +128,6 @@ So, you can easily apply its original size.
 
 <script setup lang="ts">
 import LogoSvg from '@/icons/logo.svg?component'
-</script>
-```
-
-## In Vue
-
-```vue
-<template>
-  <div>
-    <h2>SVG component: </h2>
-
-    <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
-    <LogoSvg fill="red" />
-
-    <!-- you can change the svg icon size with `font-size` or `width`. both of this will be responsive -->
-    <LogoSvg font-size="48" />
-    <LogoSvg width="48" />
-
-    <h2>SVG url: </h2>
-
-    <p>
-      <img :src="logoSvgUrl" alt="" width="36" />
-    </p>
-
-    <h2>SVG raw: </h2>
-
-    <p>
-      <span v-html="logoSvgRaw"></span>
-    </p>
-  </div>
-</template>
-
-<script setup lang="ts">
-import LogoSvg from '@/icons/logo.svg?component'
-import logoSvgUrl from '@/icons/logo.svg?url'
-import logoSvgRaw from '@/icons/logo.svg?raw'
 </script>
 ```
 
