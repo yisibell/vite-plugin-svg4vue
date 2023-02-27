@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## v2.6.1
+
+
+### 🏡 Chore
+
+  - **docs:** Update readme (15949b4)
+
+### ❤️  Contributors
+
+- Elenh ([@yisibell](http://github.com/yisibell))
+
 ## v2.6.0
 
 
