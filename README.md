@@ -129,4 +129,4 @@ see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
 
 # Framework Support
 
-- **Nuxt**: see <a href="https://github.com/yisibell/vite-plugin-svg4vue" target="_blank">vite-plugin-svg4vue</a>.
+- **Nuxt**: see <a href="https://github.com/yisibell/nuxt-svg-icons" target="_blank">nuxt-svg-icons</a>.
