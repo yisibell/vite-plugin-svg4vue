@@ -15,7 +15,10 @@
         <input type="color" v-model="color2" />
       </label>
 
-      <!-- Just in case, it records the original size of the svg as a css variable. So, you can easily apply its original size -->
+      <!-- 
+        Just in case, it records the original size of the svg as a css variable. 
+        So, you can easily apply its original size 
+      -->
       <PathInGFillMonochromeSvg
         :fill="color2"
         style="width: var(--svg-origin-width); height: var(--svg-origin-height)"

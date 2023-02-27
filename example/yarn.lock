@@ -2761,6 +2761,11 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==
 
+svgo-extra@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/svgo-extra/-/svgo-extra-1.1.0.tgz#1d96e8ec4eeb9c3f731b7b389360d54afab06509"
+  integrity sha512-xphFsZgYhv8R9NUeHUGC8M4xoEjdlAUXXBVeZ2nkGVFNupgeWFLNpBlzJUX790RvyAXUUNTwsF59hmRcSy8NaQ==
+
 svgo@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-3.0.2.tgz#5e99eeea42c68ee0dc46aa16da093838c262fe0a"
@@ -2924,12 +2929,13 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vite-plugin-svg4vue@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-2.4.0.tgz#5164bf4584e22b9fe9106919b5accf271ab0ff7e"
-  integrity sha512-MYvlV9pg0+q7lclcUF3Yy86C5ijM+cIDYuKlFgDSHG8bI/PvV9AB9c6XlWkVrqqbuAfb5yIdo5c5YAieYsXNnw==
+vite-plugin-svg4vue@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svg4vue/-/vite-plugin-svg4vue-2.6.1.tgz#dc7d53d8f8e29717540b1f97e213c7b70e0db052"
+  integrity sha512-/04H1vihKgIx9xyLa/ZkUJNM/4LN84hetINVF81VYT6YiKreySRwN4Wk6fvvi6Gbif0wbNGCFTMeW1z+/2d0vg==
   dependencies:
     svgo "^3.0.2"
+    svgo-extra "^1.1.0"
 
 "vite@^3.0.0 || ^4.0.0", vite@^4.0.0:
   version "4.0.2"
