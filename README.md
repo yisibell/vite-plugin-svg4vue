@@ -21,8 +21,9 @@ see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Examp
 - [SVGO](https://github.com/svg/svgo) optimization.
 - Hot Module Replacement support.
 - Support for `?url` , `?component` and `?raw` query string.
-- Support custom svg icon (monochrome) color with `fill` and `stroke` attribute.
+- Support custom svg icon (monochrome) color with `fill` , `fill-opacity` , `stroke` , `stroke-opacity` attribute.
 - Support change svg icon size with `font-size` and it will be responsive.
+- Support <a href="https://www.iconfont.cn/" target="_blank">Iconfont SVG Icons</a>.
 
 # Installation
 
@@ -55,7 +56,7 @@ export default defineConfig({
 })
 ```
 
-If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to d.ts declaration file.
+If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.ts` declaration file.
 
 ``` ts
 /// <reference types="vite-plugin-svg4vue/client" />
@@ -100,7 +101,7 @@ import LogoSvg from '@/icons/logo.svg?component'
 ```vue
 <template>
   <div>
-    <h2>svg component</h2>
+    <h2>SVG component: </h2>
 
     <!-- you can change the svg icon color with `fill` attribute when it's a monochrome icon -->
     <LogoSvg fill="red" />
@@ -109,10 +110,16 @@ import LogoSvg from '@/icons/logo.svg?component'
     <LogoSvg font-size="48" />
     <LogoSvg width="48" />
 
-    <h2>svg url</h2>
+    <h2>SVG url: </h2>
 
     <p>
       <img :src="logoSvgUrl" alt="" width="36" />
+    </p>
+
+    <h2>SVG raw: </h2>
+
+    <p>
+      <span v-html="logoSvgRaw"></span>
     </p>
   </div>
 </template>
@@ -120,6 +127,7 @@ import LogoSvg from '@/icons/logo.svg?component'
 <script setup lang="ts">
 import LogoSvg from '@/icons/logo.svg?component'
 import logoSvgUrl from '@/icons/logo.svg?url'
+import logoSvgRaw from '@/icons/logo.svg?raw'
 </script>
 ```
 
