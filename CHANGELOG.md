@@ -1,5 +1,22 @@
 # CHANGE LOG
 
+## v2.7.0
+
+
+### 🚀 Enhancements
+
+  - Support switch svgo preset-default configuration (d6ac771)
+
+### 🏡 Chore
+
+  - **docs:** Update example (0697b1e)
+  - **docs:** Update readme (160df31)
+  - **docs:** Update readme (d39d5e9)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.6.1
 
 
