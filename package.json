@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "svgo": "^3.0.2",
-    "svgo-extra": "^1.1.0"
+    "svgo-extra": "^1.2.0"
   },
   "peerDependencies": {
     "vite": "^3.0.0 || ^4.0.2",

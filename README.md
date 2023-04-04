@@ -102,6 +102,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 | Key | Default value | Description |
 | :---: | :---: | :---: |
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
+| `enableSvgoPresetDefaultConfig` | `true` | Whether to enable `preset-default` configuration for **SVGO** |
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` |
 | `assetsDirName` | `icons` | Limit the svg icon in a folder |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |

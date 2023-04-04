@@ -2377,10 +2377,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo-extra@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/svgo-extra/-/svgo-extra-1.1.0.tgz#1d96e8ec4eeb9c3f731b7b389360d54afab06509"
-  integrity sha512-xphFsZgYhv8R9NUeHUGC8M4xoEjdlAUXXBVeZ2nkGVFNupgeWFLNpBlzJUX790RvyAXUUNTwsF59hmRcSy8NaQ==
+svgo-extra@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/svgo-extra/-/svgo-extra-1.2.0.tgz#d8cddff8d69a6e7a08e9db074d9d65baaff86db0"
+  integrity sha512-UnRY+UbfCEtsHkIexXfKsjnfVgCjNQbYhq6ai3bNkj0vr13wXsw452Qc+T6xxBEk2DTnfdgCxkGNVkqIcwgCBw==
 
 svgo@^3.0.2:
   version "3.0.2"

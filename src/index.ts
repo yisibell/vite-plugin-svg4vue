@@ -2,7 +2,7 @@ import compileSvg from './compileSvg'
 import optimizeSvg from './optimizeSvg'
 import { readFileSync } from 'fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
-import createSvgoConfig from './createSvgoConfig'
+import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
@@ -13,6 +13,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     enableBuildCache = true,
     enableMonochromeSvgOptimize = true,
     enableSvgSizeResponsive = true,
+    enableSvgoPresetDefaultConfig = true,
   } = options
 
   const svgComponentCache = new Map()
@@ -28,6 +29,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     moveStrokeAttrToSvgNode: enableMonochromeSvgOptimize,
     movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
     responsiveSVGSize: enableSvgSizeResponsive,
+    presetDefault: enableSvgoPresetDefaultConfig,
   })
 
   return {
