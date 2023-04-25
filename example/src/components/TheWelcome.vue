@@ -98,6 +98,22 @@
 
     <b class="mr-10">result:</b> <UseFontSizeDemo />
   </WelcomeItem>
+
+  <WelcomeItem>
+    <template #icon>
+      <OptimizeIcon font-size="24" />
+    </template>
+    <template #heading>Skip SVGO for a single file</template>
+
+    <div>
+      SVGO can be explicitly disabled for one file by adding the
+      <code class="inline-code">?skipsvgo</code> or suffix:
+    </div>
+
+    <pre class="language-markup"><code>{{ UseWithSkipsvgoCode }}</code></pre>
+
+    <b class="mr-10">result:</b> <UseWithSkipsvgoDemo />
+  </WelcomeItem>
 </template>
 
 <script setup lang="ts">
@@ -126,4 +142,7 @@ import UseFillAndStrokeDemoCode from '@/assets/demo/UseFillAndStroke.vue?raw'
 
 import UseFontSizeDemo from '@/assets/demo/UseFontSize.vue'
 import UseFontSizeDemoCode from '@/assets/demo/UseFontSize.vue?raw'
+
+import UseWithSkipsvgoDemo from '@/assets/demo/UseWithSkipsvgo.vue'
+import UseWithSkipsvgoCode from '@/assets/demo/UseWithSkipsvgo.vue?raw'
 </script>

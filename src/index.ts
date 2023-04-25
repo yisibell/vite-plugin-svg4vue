@@ -4,6 +4,7 @@ import { readFileSync } from 'fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
 import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
+import { resolveSearchParams } from './getSearchParams'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
@@ -18,10 +19,6 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
   const svgComponentCache = new Map()
   const svgRawCache = new Map()
-
-  const svgRegex = new RegExp(
-    `${assetsDirName}/.*\\.svg(?:\\?(component|url|raw))?$`
-  )
 
   let isBuild = false
 
@@ -39,17 +36,19 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
       return config
     },
     async transform(source: string, id: string) {
-      const matchedId = id.match(svgRegex)
-      const idWithoutQuery = id.replace(/\.svg\?.*/, '.svg')
+      const { idWithoutQuery, type, matchedId, skipsvgo } = resolveSearchParams(
+        id,
+        assetsDirName
+      )
 
       if (matchedId) {
-        const type = matchedId[1]
-
         // handle to raw
         if (
           (defaultExport === 'raw' && typeof type === 'undefined') ||
           type === 'raw'
         ) {
+          if (skipsvgo) return source
+
           let cachedSvgRawResult = svgRawCache.get(idWithoutQuery)
 
           if (!cachedSvgRawResult) {
@@ -85,7 +84,11 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           if (!cachedSvgComponentResult) {
             const code = readFileSync(idWithoutQuery, 'utf8')
 
-            const svg = await optimizeSvg(code, idWithoutQuery, finalSvgoConfig)
+            let svg = code
+
+            if (!skipsvgo) {
+              svg = await optimizeSvg(code, idWithoutQuery, finalSvgoConfig)
+            }
 
             cachedSvgComponentResult = await compileSvg(svg, idWithoutQuery)
 
