@@ -91,6 +91,29 @@ import logoSvgRaw from '@/icons/logo.svg?raw'
 </script>
 ```
 
+## Skip SVGO for a single file
+
+SVGO can be explicitly disabled for one file by adding the `?skipsvgo` or suffix:
+
+```vue
+<template>
+  <div class="d-flex align-center mb-16">
+    <label class="mr-12"> ?component&skipsvgo: </label>
+    <PPTSvg />
+  </div>
+
+  <div class="d-flex align-center">
+    <label class="mr-12"> ?raw&skipsvgo: </label>
+    <span v-html="PPTSvgRaw"></span>
+  </div>
+</template>
+
+<script setup lang="ts">
+import PPTSvg from '@/icons/ppt.svg?component&skipsvgo'
+import PPTSvgRaw from '@/icons/ppt.svg?raw&skipsvgo'
+</script>
+```
+
 If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.ts` declaration file.
 
 ``` ts
@@ -99,15 +122,15 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 
 ## Options
 
-| Key | Default value | Description |
-| :---: | :---: | :---: |
-| `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config |
-| `enableSvgoPresetDefaultConfig` | `true` | Whether to enable `preset-default` configuration for **SVGO** |
-| `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` |
-| `assetsDirName` | `icons` | Limit the svg icon in a folder |
-| `enableBuildCache` | `true` | Whether to enable caching at build time |
-| `enableMonochromeSvgOptimize` | `true` | Whether to enable **monochrome** svg icon optimize which can move child node (named **path**, Even the **path** wrapped by **g**) 's `fill`, `fill-opacity` and `stroke`, `stroke-opacity` attribute to its parent node (**svg** element). So that you can change the svg icon color with `fill` and `stroke`. |
-| `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive.  |
+| Key | Default value | Description | Type |
+| :---: | :---: | :---: | :---: |
+| `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config. if set to `false`, will disabled **SVGO**. | `object/boolean` |
+| `enableSvgoPresetDefaultConfig` | `true` | Whether to enable `preset-default` configuration for **SVGO** | `boolean` |
+| `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` | `string` |
+| `assetsDirName` | `icons` | Limit the svg icon in a folder | `string` |
+| `enableBuildCache` | `true` | Whether to enable caching at build time |  `boolean` |
+| `enableMonochromeSvgOptimize` | `true` | Whether to enable **monochrome** svg icon optimize which can move child node (named **path**, Even the **path** wrapped by **g**) 's `fill`, `fill-opacity` and `stroke`, `stroke-opacity` attribute to its parent node (**svg** element). So that you can change the svg icon color with `fill` and `stroke`. | `boolean` |
+| `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive.  | `boolean` |
 
 
 ### What `enableSvgSizeResponsive` do ?

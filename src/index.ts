@@ -5,6 +5,7 @@ import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
 import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 import { resolveSearchParams } from './getSearchParams'
+import type { Config as SvgoConfig } from 'svgo'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
@@ -22,12 +23,16 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
   let isBuild = false
 
-  const finalSvgoConfig = createSvgoConfig(svgoConfig, {
-    moveStrokeAttrToSvgNode: enableMonochromeSvgOptimize,
-    movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
-    responsiveSVGSize: enableSvgSizeResponsive,
-    presetDefault: enableSvgoPresetDefaultConfig,
-  })
+  const disabledSvgo = svgoConfig === false
+
+  const finalSvgoConfig = disabledSvgo
+    ? {}
+    : createSvgoConfig(svgoConfig as SvgoConfig, {
+        moveStrokeAttrToSvgNode: enableMonochromeSvgOptimize,
+        movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
+        responsiveSVGSize: enableSvgSizeResponsive,
+        presetDefault: enableSvgoPresetDefaultConfig,
+      })
 
   return {
     name: 'vite-plugin-svg4vue',
@@ -47,7 +52,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           (defaultExport === 'raw' && typeof type === 'undefined') ||
           type === 'raw'
         ) {
-          if (skipsvgo) return source
+          if (disabledSvgo || skipsvgo) return source
 
           let cachedSvgRawResult = svgRawCache.get(idWithoutQuery)
 
@@ -86,7 +91,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
             let svg = code
 
-            if (!skipsvgo) {
+            if (!disabledSvgo && !skipsvgo) {
               svg = await optimizeSvg(code, idWithoutQuery, finalSvgoConfig)
             }
 
