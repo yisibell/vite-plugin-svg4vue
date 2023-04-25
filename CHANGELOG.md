@@ -1,5 +1,20 @@
 # CHANGE LOG
 
+## v2.8.1
+
+
+### 🩹 Fixes
+
+  - GetSearchParams use URL error (6e87abb)
+
+### 🏡 Chore
+
+  - Fix example deps (533c650)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.8.0
 
 
