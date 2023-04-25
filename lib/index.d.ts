@@ -2,7 +2,7 @@ import { Config } from 'svgo';
 import { Plugin } from 'vite';
 
 interface Svg4VuePluginOptions {
-  svgoConfig?: Config
+  svgoConfig?: Config | boolean
   enableSvgoPresetDefaultConfig?: boolean
   defaultExport?: 'url' | 'raw' | 'component'
   assetsDirName?: string

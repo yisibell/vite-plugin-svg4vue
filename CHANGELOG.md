@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v2.8.0
+
+
+### 🚀 Enhancements
+
+  - Support skipsvgo search param (e3bef55)
+  - Support disabled svgo global (dd31b25)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.7.0
 
 
