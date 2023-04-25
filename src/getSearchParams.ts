@@ -1,15 +1,16 @@
-const getSearchParams = (url: string) => {
-  return new URL(url).searchParams
-}
+import qs from 'node:querystring'
 
 const resolveSearchParams = (url: string, assetsDirName: string) => {
   const idWithoutQuery = url.replace(/\.svg\?.*/, '.svg')
-  const searchParams = getSearchParams(url)
-  const searchParamsKeys = [...searchParams.keys()]
 
   // legecy: `${assetsDirName}/.*\\.svg(?:\\?(component|url|raw))?$`
   const svgRegex = new RegExp(`${assetsDirName}/.*\\.svg(\\?.*)?$`)
   const matchedId = url.match(svgRegex)
+  const querystring = Array.isArray(matchedId)
+    ? matchedId[1].replace('?', '')
+    : ''
+
+  const searchParamsKeys = Object.keys(qs.parse(querystring))
 
   const skipsvgo = searchParamsKeys.includes('skipsvgo')
 
@@ -22,7 +23,8 @@ const resolveSearchParams = (url: string, assetsDirName: string) => {
     searchParamsKeys,
     matchedId,
     idWithoutQuery,
+    querystring,
   }
 }
 
-export { getSearchParams, resolveSearchParams }
+export { resolveSearchParams }
