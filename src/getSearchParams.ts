@@ -3,7 +3,7 @@ import qs from 'node:querystring'
 const resolveSearchParams = (url: string, assetsDirName: string) => {
   const idWithoutQuery = url.replace(/\.svg\?.*/, '.svg')
 
-  // legecy: `${assetsDirName}/.*\\.svg(?:\\?(component|url|raw))?$`
+  // legacy regexp: `${assetsDirName}/.*\\.svg(?:\\?(component|url|raw))?$`
   const svgRegex = new RegExp(`${assetsDirName}/.*\\.svg(\\?.*)?$`)
   const matchedId = url.match(svgRegex)
   const querystring = Array.isArray(matchedId)
