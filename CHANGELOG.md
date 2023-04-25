@@ -1,5 +1,18 @@
 # CHANGE LOG
 
+## v2.8.2
+
+
+### 🏡 Chore
+
+  - **docs:** Update readme (920bb21)
+  - Update example (e64775d)
+  - **docs:** Update readme (8579dd2)
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.8.1
 
 
