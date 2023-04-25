@@ -93,7 +93,7 @@ import logoSvgRaw from '@/icons/logo.svg?raw'
 
 ## Skip SVGO for a single file (Added in v2.8.1)
 
-SVGO can be explicitly disabled for one file by adding the `?skipsvgo` query string:
+**SVGO** can be explicitly disabled for one file by adding the `?skipsvgo` query string:
 
 ```vue
 <template>
