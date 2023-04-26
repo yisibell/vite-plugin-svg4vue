@@ -1,5 +1,22 @@
 # CHANGE LOG
 
+## v2.9.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.8.2...v2.9.0)
+
+
+### 🚀 Enhancements
+
+  - Upgrade vite to 4.3 ([b591dd5](https://github.com/yisibell/vite-plugin-svg4vue/commit/b591dd5))
+
+### 🏡 Chore
+
+  - **docs:** Update readme ([96b384a](https://github.com/yisibell/vite-plugin-svg4vue/commit/96b384a))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.8.2
 
 
