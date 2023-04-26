@@ -36,5 +36,5 @@ jobs:
           folder: example/dist
           silent: true
           clean: true
-          branch: docs
+          branch: gh-pages
           single-commit: true
