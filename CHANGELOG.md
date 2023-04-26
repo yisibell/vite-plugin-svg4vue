@@ -1,5 +1,22 @@
 # CHANGE LOG
 
+## v2.10.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.9.0...v2.10.0)
+
+
+### 🚀 Enhancements
+
+  - Update pkg to module type ([1e84f47](https://github.com/yisibell/vite-plugin-svg4vue/commit/1e84f47))
+
+### 🏡 Chore
+
+  - **example:** Update deploy branch ([80f9ecf](https://github.com/yisibell/vite-plugin-svg4vue/commit/80f9ecf))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.9.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.8.2...v2.9.0)
