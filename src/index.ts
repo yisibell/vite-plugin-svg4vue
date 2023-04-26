@@ -1,7 +1,7 @@
 import compileSvg from './compileSvg'
 import optimizeSvg from './optimizeSvg'
 import { readFileSync } from 'fs'
-import { Svg4VuePlugin, Svg4VuePluginOptions } from '../types/index'
+import { Svg4VuePlugin, Svg4VuePluginOptions } from './interfaces/core'
 import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 import { resolveSearchParams } from './getSearchParams'

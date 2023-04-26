@@ -5,6 +5,13 @@
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.esm.js",
+      "require": "./lib/index.cjs.js",
+      "types": "./lib/index.d.ts"
+    }
+  },
   "files": [
     "lib",
     "client.d.ts",
@@ -24,9 +31,11 @@
     "vite-plugin",
     "vue",
     "svg",
+    "svgo",
     "svg-component",
     "svg-icon",
-    "icon"
+    "icon",
+    "vite-svg-loader"
   ],
   "author": {
     "name": "elenh",
@@ -42,7 +51,7 @@
     "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
-    "changelogen": "^0.4.1",
+    "changelogen": "~0.5.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.30.0",
     "eslint-config-prettier": "^8.5.0",
@@ -52,7 +61,7 @@
     "rollup-plugin-dts": "^5.1.1",
     "tslib": "^2.4.1",
     "typescript": "~4.9.4",
-    "vite": "^4.0.2",
+    "vite": "~4.3.2",
     "vue": "^3.2.45"
   },
   "dependencies": {
