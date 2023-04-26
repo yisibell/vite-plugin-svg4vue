@@ -2614,10 +2614,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo-extra@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/svgo-extra/-/svgo-extra-1.2.0.tgz#d8cddff8d69a6e7a08e9db074d9d65baaff86db0"
-  integrity sha512-UnRY+UbfCEtsHkIexXfKsjnfVgCjNQbYhq6ai3bNkj0vr13wXsw452Qc+T6xxBEk2DTnfdgCxkGNVkqIcwgCBw==
+svgo-extra@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/svgo-extra/-/svgo-extra-2.0.0.tgz#6d0e4ba3e4422008c4d3096b5b52281946f77e95"
+  integrity sha512-kpC6Uh42BTN8oha6gJjake7CRUYXJf4An6C5t0bHmbMqzc3a+F1IOimzOFLUZZ/iUCS3WS8gYMLj9tTQ94F6AQ==
 
 svgo@^3.0.2:
   version "3.0.2"
@@ -2767,7 +2767,7 @@ v8-compile-cache-lib@^3.0.1:
   resolved "https://registry.npmmirror.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
 
-vite@~4.3.1:
+vite@~4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/vite/-/vite-4.3.2.tgz#95a5e0ebee80ae218849312019318aa9e3a05c26"
   integrity sha512-9R53Mf+TBoXCYejcL+qFbZde+eZveQLDYd9XgULILLC1a5ZwPaqgmdVpL8/uvw2BM/1TzetWjglwm+3RO+xTyw==

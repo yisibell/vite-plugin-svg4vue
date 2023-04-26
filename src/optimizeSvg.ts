@@ -1,4 +1,4 @@
-import { optimize } from 'svgo'
+import * as SVGO from 'svgo'
 import type { Config as SvgoConfig } from 'svgo'
 
 /**
@@ -9,7 +9,7 @@ async function optimizeSvg(
   path: string,
   finalSvgoConfig: SvgoConfig = {}
 ) {
-  const { data } = await optimize(content, {
+  const { data } = await SVGO.optimize(content, {
     ...finalSvgoConfig,
     path,
   })
