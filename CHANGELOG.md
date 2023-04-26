@@ -1,5 +1,18 @@
 # CHANGE LOG
 
+## v2.11.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.10.0...v2.11.0)
+
+
+### 🚀 Enhancements
+
+  - Update svgo-extra to 2.0.0 ([f8d2fa4](https://github.com/yisibell/vite-plugin-svg4vue/commit/f8d2fa4))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.10.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.9.0...v2.10.0)
