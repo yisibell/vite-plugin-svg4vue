@@ -114,7 +114,7 @@ import PPTSvgRaw from '@/icons/ppt.svg?raw&skipsvgo'
 </script>
 ```
 
-## Typescipt
+## Typescript
 
 If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.ts` declaration file.
 
