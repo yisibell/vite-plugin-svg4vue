@@ -129,7 +129,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 | `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config. if set to `false`, will disabled **SVGO**. | `object/boolean` |
 | `enableSvgoPresetDefaultConfig` | `true` | Whether to enable `preset-default` configuration for **SVGO** | `boolean` |
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` | `string` |
-| `assetsDirName` | `icons` | Restrict SVG to a specific folder. As long as the SVG is in the `assetsDirName` folder, it can be processed by this plugin, Even if the folder is nested, such as, `path/to/icons/*.svg`, `icons/path/to/svg/*.svg` , ` path/to/icons/path/to/*.svg` and so on. | `string` |
+| `assetsDirName` | `icons` | Restrict SVG to a specific folder. As long as the SVG is in the `assetsDirName` folder, it can be processed by this plugin, Even if the folder is nested, such as, `path/to/icons/*.svg`, `icons/path/to/svg/*.svg` , ` path/to/icons/path/to/*.svg` and so on. If set `assetsDirname` to `false` , will make it work with arbitrary file path. | `string/boolean` |
 | `enableBuildCache` | `true` | Whether to enable caching at build time |  `boolean` |
 | `enableMonochromeSvgOptimize` | `true` | Whether to enable **monochrome** svg icon optimize which can move child node (named **path**, Even the **path** wrapped by **g**) 's `fill`, `fill-opacity` and `stroke`, `stroke-opacity` attribute to its parent node (**svg** element). So that you can change the svg icon color with `fill` and `stroke`. | `boolean` |
 | `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive.  | `boolean` |

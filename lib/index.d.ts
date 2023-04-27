@@ -5,7 +5,7 @@ interface Svg4VuePluginOptions {
   svgoConfig?: Config | boolean
   enableSvgoPresetDefaultConfig?: boolean
   defaultExport?: 'url' | 'raw' | 'component'
-  assetsDirName?: string
+  assetsDirName?: string | boolean
   enableBuildCache?: boolean
   enableSvgSizeResponsive?: boolean
   enableMonochromeSvgOptimize?: boolean

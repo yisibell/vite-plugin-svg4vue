@@ -6,12 +6,13 @@ import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 import { resolveSearchParams } from './getSearchParams'
 import type { Config as SvgoConfig } from 'svgo'
+import { DEFAULT_OPTIONS } from './defaults'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
     svgoConfig = {},
-    defaultExport = 'url',
-    assetsDirName = 'icons',
+    defaultExport = DEFAULT_OPTIONS.defaultExport,
+    assetsDirName = DEFAULT_OPTIONS.assetsDirName,
     enableBuildCache = true,
     enableMonochromeSvgOptimize = true,
     enableSvgSizeResponsive = true,

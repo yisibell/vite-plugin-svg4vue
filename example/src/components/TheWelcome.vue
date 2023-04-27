@@ -35,7 +35,8 @@
 
     <div class="mb-12">
       Support for
-      <code class="inline-code">?url</code>
+      <code class="inline-code">?url</code>，
+      <code class="inline-code">?raw</code>
       and <code class="inline-code">?component</code> query string.
     </div>
 
