@@ -1,5 +1,22 @@
 # CHANGE LOG
 
+## v2.12.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.11.0...v2.12.0)
+
+
+### 🚀 Enhancements
+
+  - Support work with arbitrary file path via set assetsDirName to false ([88a21c2](https://github.com/yisibell/vite-plugin-svg4vue/commit/88a21c2))
+
+### 🏡 Chore
+
+  - **example:** Fix example build error ([af8b7e2](https://github.com/yisibell/vite-plugin-svg4vue/commit/af8b7e2))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.11.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.10.0...v2.11.0)
