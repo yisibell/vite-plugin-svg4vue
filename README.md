@@ -126,7 +126,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 
 | Key | Default value | Description | Type |
 | :---: | :---: | :---: | :---: |
-| `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config. if set to `false`, will disabled **SVGO**. | `object/boolean` |
+| `svgoConfig` | `{}` | [SVGO](https://github.com/svg/svgo) config. if set to `false`, will disable **SVGO**. | `object/boolean` |
 | `enableSvgoPresetDefaultConfig` | `true` | Whether to enable `preset-default` configuration for **SVGO** | `boolean` |
 | `defaultExport` | `url` | Default behavior when importing `.svg` files, possible options are: `url` , `component` and `raw` | `string` |
 | `assetsDirName` | `icons` | Restrict SVG to a specific folder. As long as the SVG is in the `assetsDirName` folder, it can be processed by this plugin, Even if the folder is nested, such as, `path/to/icons/*.svg`, `icons/path/to/svg/*.svg` , ` path/to/icons/path/to/*.svg` and so on. If set `assetsDirname` to `false` , will make it work with arbitrary file path. | `string/boolean` |
