@@ -1,5 +1,18 @@
 # CHANGE LOG
 
+## v2.13.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.12.0...v2.13.0)
+
+
+### 🚀 Enhancements
+
+  - Support source map ([b67b947](https://github.com/yisibell/vite-plugin-svg4vue/commit/b67b947))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.12.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.11.0...v2.12.0)
