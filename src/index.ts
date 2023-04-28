@@ -19,8 +19,8 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     enableSvgoPresetDefaultConfig = true,
   } = options
 
-  const svgComponentCache = new Map()
-  const svgRawCache = new Map()
+  const svgComponentCache = new Map<string, any>()
+  const svgRawCache = new Map<string, string>()
 
   let isBuild = false
 
