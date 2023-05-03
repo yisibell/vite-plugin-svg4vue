@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "svgo": "^3.0.2",
-    "svgo-extra": "^2.0.0",
+    "svgo-extra": "^2.1.0",
     "ufo": "^1.1.1"
   },
   "peerDependencies": {
