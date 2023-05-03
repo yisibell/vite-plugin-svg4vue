@@ -1,5 +1,23 @@
 # CHANGE LOG
 
+## v2.14.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.13.0...v2.14.0)
+
+
+### 🚀 Enhancements
+
+  - Upgrade deps svgo-extra to 2.1 ([7ab6d12](https://github.com/yisibell/vite-plugin-svg4vue/commit/7ab6d12))
+
+### 🏡 Chore
+
+  - **docs:** Update readme ([fa6d9ec](https://github.com/yisibell/vite-plugin-svg4vue/commit/fa6d9ec))
+
+### ❤️  Contributors
+
+- Elenh ([@yisibell](http://github.com/yisibell))
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.13.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.12.0...v2.13.0)
