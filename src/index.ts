@@ -55,7 +55,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
         ) {
           if (disabledSvgo || skipsvgo) return source
 
-          let cachedSvgRawResult = svgRawCache.get(idWithoutQuery)
+          let cachedSvgRawResult = svgRawCache.get(id)
 
           if (!cachedSvgRawResult) {
             const code = readFileSync(idWithoutQuery, 'utf8')
@@ -65,7 +65,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
             cachedSvgRawResult = compileSvgToRaw(svg)
 
             if (enableBuildCache && isBuild) {
-              svgRawCache.set(idWithoutQuery, cachedSvgRawResult)
+              svgRawCache.set(id, cachedSvgRawResult)
             }
           }
 
@@ -85,7 +85,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           (defaultExport === 'component' && typeof type === 'undefined') ||
           type === 'component'
         ) {
-          let cachedSvgComponentResult = svgComponentCache.get(idWithoutQuery)
+          let cachedSvgComponentResult = svgComponentCache.get(id)
 
           if (!cachedSvgComponentResult) {
             const code = readFileSync(idWithoutQuery, 'utf8')
@@ -99,7 +99,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
             cachedSvgComponentResult = await compileSvg(svg, idWithoutQuery)
 
             if (enableBuildCache && isBuild) {
-              svgComponentCache.set(idWithoutQuery, cachedSvgComponentResult)
+              svgComponentCache.set(id, cachedSvgComponentResult)
             }
           }
 
