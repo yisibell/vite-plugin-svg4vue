@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <FeatureSection>
-      <template #title> <code>Maintenance colors</code> </template>
+      <template #title> <code>Maintenance of colors</code> </template>
 
       <template #sub-title>
         Support maintenance SVG icon (monochrome) color via

@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <FeatureSection>
-      <template #title> <code>Maintenance size</code> </template>
+      <template #title> <code>Maintenance of size</code> </template>
 
       <template #sub-title>
         You can change the SVG icon <b>size</b> with <code>font-size</code> or

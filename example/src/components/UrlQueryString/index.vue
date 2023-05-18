@@ -5,7 +5,7 @@
 
       <template #sub-title>
         You can import SVG as a url via
-        <code>?url</code> query string, which can used by src of img element.
+        <code>?url</code> query string, which can be used by src of img element.
       </template>
 
       <template #demo>
