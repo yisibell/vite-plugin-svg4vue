@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import WordSvg from '@/icons/word.svg?component'
 import { ref } from 'vue'
+import WordSvg from '@/icons/word.svg?component'
 
 const size = ref('40')
 const width = ref('40')

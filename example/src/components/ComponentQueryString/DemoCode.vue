@@ -1,5 +1,7 @@
 <template>
-  <LogoSvg />
+  <div class="">
+    <LogoSvg font-size="200" />
+  </div>
 </template>
 
 <script setup lang="ts">
