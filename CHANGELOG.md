@@ -1,5 +1,26 @@
 # CHANGE LOG
 
+## v2.15.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.14.0...v2.15.0)
+
+
+### 🚀 Enhancements
+
+  - **cache:** Using id as build cache key instead of idWithoutQuery ([ab30049](https://github.com/yisibell/vite-plugin-svg4vue/commit/ab30049))
+
+### 🩹 Fixes
+
+  - **example:** Example 404 error ([93ecab6](https://github.com/yisibell/vite-plugin-svg4vue/commit/93ecab6))
+
+### 🏡 Chore
+
+  - **example:** Update example ([a394ec4](https://github.com/yisibell/vite-plugin-svg4vue/commit/a394ec4))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.14.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.13.0...v2.14.0)
