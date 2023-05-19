@@ -24,7 +24,10 @@
         <span>Select a stroke color: </span>
         <input v-model="strokeColor" type="color" />
       </div>
-      <div><LineOutline :fill="fillColor2" :stroke="strokeColor" /></div>
+
+      <div>
+        <LineOutline :fill="fillColor2" :stroke="strokeColor" />
+      </div>
     </div>
   </div>
 </template>

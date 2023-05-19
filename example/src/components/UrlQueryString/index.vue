@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <FeatureSection reverse>
+    <FeatureSection>
       <template #title> <code>with ?url</code> </template>
 
       <template #sub-title>

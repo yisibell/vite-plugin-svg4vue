@@ -45,6 +45,7 @@ const styleVars = computed(() => ({
   justify-content: space-between;
   margin-bottom: 250px;
   flex-direction: var(--flex-direction);
+  flex-wrap: wrap;
 }
 
 .feature-desc,
