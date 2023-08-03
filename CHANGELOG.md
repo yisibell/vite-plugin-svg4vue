@@ -1,5 +1,25 @@
 # CHANGE LOG
 
+## v2.16.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.15.0...v2.16.0)
+
+
+### 🚀 Enhancements
+
+  - Support for vite 4.4 vue 3.3 ([6e56e2b](https://github.com/yisibell/vite-plugin-svg4vue/commit/6e56e2b))
+
+### 🏡 Chore
+
+  - **example:** Update example ([511e742](https://github.com/yisibell/vite-plugin-svg4vue/commit/511e742))
+  - **example:** Update favicon ([fde54c8](https://github.com/yisibell/vite-plugin-svg4vue/commit/fde54c8))
+  - **example:** Update example ([6569490](https://github.com/yisibell/vite-plugin-svg4vue/commit/6569490))
+  - Migrate to pnpm ([bc04f7c](https://github.com/yisibell/vite-plugin-svg4vue/commit/bc04f7c))
+
+### ❤️  Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.15.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.14.0...v2.15.0)
