@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v2.17.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.16.0...v2.17.0)
+
+### 🚀 Enhancements
+
+- Update typescript to v5 and other non-major deps ([042091d](https://github.com/yisibell/vite-plugin-svg4vue/commit/042091d))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.16.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.15.0...v2.16.0)
