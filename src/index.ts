@@ -39,7 +39,6 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     name: 'vite-plugin-svg4vue',
     config(config, { command }) {
       isBuild = command === 'build'
-      return config
     },
     async transform(source: string, id: string) {
       const { idWithoutQuery, type, matchedId, skipsvgo } = resolveSearchParams(
