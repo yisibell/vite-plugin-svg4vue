@@ -1,5 +1,20 @@
 # CHANGE LOG
 
+## v2.17.1
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.0...v2.17.1)
+
+### 🩹 Fixes
+
+- Do not return config from hook ([7590dab](https://github.com/yisibell/vite-plugin-svg4vue/commit/7590dab))
+- Use configResolved + config.mode ([3d091e8](https://github.com/yisibell/vite-plugin-svg4vue/commit/3d091e8))
+- Use resolved config + mode rather than modifying or mutating config ([8219678](https://github.com/yisibell/vite-plugin-svg4vue/commit/8219678))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+- Daniel Roe <daniel@roe.dev>
+
 ## v2.17.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.16.0...v2.17.0)
