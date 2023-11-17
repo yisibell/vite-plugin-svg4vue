@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v2.17.2
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.1...v2.17.2)
+
+### 🩹 Fixes
+
+- PeerDependencies support vite v5 ([85df290](https://github.com/yisibell/vite-plugin-svg4vue/commit/85df290))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v2.17.1
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.0...v2.17.1)
