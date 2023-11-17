@@ -15,4 +15,4 @@ type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => Plugin
 
 declare const svg4VuePlugin: Svg4VuePlugin
 
-export { Svg4VuePlugin, Svg4VuePluginOptions, svg4VuePlugin };
+export { type Svg4VuePlugin, type Svg4VuePluginOptions, svg4VuePlugin };
