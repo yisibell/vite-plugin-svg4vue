@@ -1,5 +1,9 @@
 # CHANGE LOG
 
+## v2.17.3
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.2...v2.17.3)
+
 ## v2.17.2
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.1...v2.17.2)
