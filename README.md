@@ -14,7 +14,8 @@ A `vite (3.x || 4.x)` plugin which can transform `SVG` icon to `vue (2.7.X || 3.
 
 > this plugin dependencies on `vue/compiler-sfc`, so keep your `vue` version to **3.2.13+** or **2.7.14+**.
 
-see <a href="https://hongwenqing.com/vite-plugin-svg4vue/" target="_blank">Example and docs</a>.
+- [Example and docs](https://hongwenqing.com/vite-plugin-svg4vue/).
+- [Release Notes](./CHANGELOG.md).
 
 # Features
 
@@ -157,10 +158,6 @@ import LogoSvg from '@/icons/logo.svg?component'
 </script>
 ```
 
-# CHANGE LOG
-
-see <a href="./CHANGELOG.md" target="_blank">CHANGE LOG</a>.
-
 # Framework Support
 
-- **Nuxt**: see <a href="https://github.com/yisibell/nuxt-svg-icons" target="_blank">nuxt-svg-icons</a>.
+- **Nuxt**: see [nuxt-svg-icons](https://github.com/yisibell/nuxt-svg-icons).
