@@ -6,7 +6,12 @@ import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 import { resolveSearchParams } from './getSearchParams'
 import type { Config as SvgoConfig } from 'svgo'
-import { DEFAULT_OPTIONS } from './defaults'
+import {
+  DEFAULT_OPTIONS,
+  COMPONENT_COMPILE_TYPE,
+  RAW_COMPILE_TYPE,
+  URL_COMPILE_TYPE,
+} from './defaults'
 
 const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
   const {
@@ -49,8 +54,8 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
       if (matchedId) {
         // handle to raw
         if (
-          (defaultExport === 'raw' && typeof type === 'undefined') ||
-          type === 'raw'
+          (defaultExport === RAW_COMPILE_TYPE && typeof type === 'undefined') ||
+          type === RAW_COMPILE_TYPE
         ) {
           if (disabledSvgo || skipsvgo) return source
 
@@ -73,16 +78,17 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
         // handle to url
         if (
-          (defaultExport === 'url' && typeof type === 'undefined') ||
-          type === 'url'
+          (defaultExport === URL_COMPILE_TYPE && typeof type === 'undefined') ||
+          type === URL_COMPILE_TYPE
         ) {
           return source
         }
 
         // handle to component
         if (
-          (defaultExport === 'component' && typeof type === 'undefined') ||
-          type === 'component'
+          (defaultExport === COMPONENT_COMPILE_TYPE &&
+            typeof type === 'undefined') ||
+          type === COMPONENT_COMPILE_TYPE
         ) {
           let cachedSvgComponentResult = svgComponentCache.get(id)
 
