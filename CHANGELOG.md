@@ -1,5 +1,21 @@
 # CHANGE LOG
 
+## v3.1.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.0.0...v3.1.0)
+
+### 🚀 Enhancements
+
+- Make `search params` disordered https://github.com/yisibell/vite-plugin-svg4vue/issues/5 ([ccb5b8a](https://github.com/yisibell/vite-plugin-svg4vue/commit/ccb5b8a))
+
+### 🏡 Chore
+
+- Update readme ([f7fd7cc](https://github.com/yisibell/vite-plugin-svg4vue/commit/f7fd7cc))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v3.0.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v2.17.1...v3.0.0)
