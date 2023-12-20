@@ -27,6 +27,7 @@
         <MaintenanceColors />
         <MaintenanceSize />
         <SkipsvgoQueryString />
+        <GlobUsage />
       </div>
     </div>
   </div>
@@ -40,6 +41,7 @@ import RawQueryString from '@/components/RawQueryString/index.vue'
 import SkipsvgoQueryString from '@/components/SkipsvgoQueryString/index.vue'
 import MaintenanceColors from '@/components/MaintenanceColors/index.vue'
 import MaintenanceSize from '@/components/MaintenanceSize/index.vue'
+import GlobUsage from '@/components/GlobUsage/index.vue'
 </script>
 
 <script lang="ts">
