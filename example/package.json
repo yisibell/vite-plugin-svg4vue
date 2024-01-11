@@ -13,6 +13,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "demoify": "^2.1.0",
     "pinia": "^2.1.6",
     "toolkitcss": "^1.1.1",
     "vite-plugin-svg4vue": "^3.0.0",

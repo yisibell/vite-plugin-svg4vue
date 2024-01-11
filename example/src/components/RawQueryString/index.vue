@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <FeatureSection>
+    <FeatureSection :reverse="false">
       <template #title> <code>with ?raw</code> </template>
 
       <template #sub-title>

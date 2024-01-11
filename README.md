@@ -14,7 +14,7 @@ A `vite (3.x || 4.x)` plugin which can transform `SVG` icon to `vue (2.7.X || 3.
 
 > this plugin dependencies on `vue/compiler-sfc`, so keep your `vue` version to **3.2.13+** or **2.7.14+**.
 
-- [Example and docs](https://hongwenqing.com/vite-plugin-svg4vue/).
+- [Example Here](https://hongwenqing.com/vite-plugin-svg4vue/).
 - [Release Notes](./CHANGELOG.md).
 
 # Features
