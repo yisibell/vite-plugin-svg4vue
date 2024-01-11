@@ -1,5 +1,18 @@
 # CHANGE LOG
 
+## v3.1.1
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.1.0...v3.1.1)
+
+### 🏡 Chore
+
+- **example:** Update glob example ([54f3126](https://github.com/yisibell/vite-plugin-svg4vue/commit/54f3126))
+- Update example site and docs ([a7ebdfd](https://github.com/yisibell/vite-plugin-svg4vue/commit/a7ebdfd))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v3.1.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.0.0...v3.1.0)
