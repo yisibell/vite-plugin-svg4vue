@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v3.2.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.1.2...v3.2.0)
+
+### 🚀 Enhancements
+
+- Upgrade vite peerDependencies version ([5a79d53](https://github.com/yisibell/vite-plugin-svg4vue/commit/5a79d53))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v3.1.2
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.1.1...v3.1.2)
