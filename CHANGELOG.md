@@ -1,5 +1,21 @@
 # CHANGE LOG
 
+## v4.0.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.2.0...v4.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Support for vite v6 ([50b6b8a](https://github.com/yisibell/vite-plugin-svg4vue/commit/50b6b8a))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Support for vite v6 ([50b6b8a](https://github.com/yisibell/vite-plugin-svg4vue/commit/50b6b8a))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v3.2.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.1.2...v3.2.0)
