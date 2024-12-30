@@ -4,8 +4,7 @@
       <template #title> <code>with ?component</code> </template>
 
       <template #sub-title>
-        You can import SVG as a Vue component via <code>?component</code> query
-        string.
+        You can import SVG as a Vue component via <code>?component</code> query string.
       </template>
 
       <template #demo>
