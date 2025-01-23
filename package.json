@@ -11,7 +11,8 @@
       "types": "./lib/index.d.ts",
       "import": "./lib/index.esm.js",
       "require": "./lib/index.cjs.js"
-    }
+    },
+    "./*": ["./*", "./*.d.ts"]
   },
   "files": [
     "lib",
