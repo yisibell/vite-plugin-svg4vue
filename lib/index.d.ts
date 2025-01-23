@@ -1,5 +1,5 @@
-import { Config } from 'svgo'
-import { Plugin } from 'vite'
+import { Config } from 'svgo';
+import { Plugin } from 'vite';
 
 interface Svg4VuePluginOptions {
   svgoConfig?: Config | boolean
@@ -15,4 +15,4 @@ type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => Plugin
 
 declare const svg4VuePlugin: Svg4VuePlugin
 
-export { type Svg4VuePlugin, type Svg4VuePluginOptions, svg4VuePlugin }
+export { type Svg4VuePlugin, type Svg4VuePluginOptions, svg4VuePlugin };
