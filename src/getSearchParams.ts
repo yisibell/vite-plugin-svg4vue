@@ -15,8 +15,8 @@ const resolveSearchParams = (url: string, assetsDirName: string | boolean) => {
     assetsDirName === false
       ? ''
       : assetsDirName === true
-      ? DEFAULT_OPTIONS.assetsDirName
-      : assetsDirName
+        ? DEFAULT_OPTIONS.assetsDirName
+        : assetsDirName
 
   const safeAssetsDirName = assetsDirNameString
     ? ufo.withTrailingSlash(assetsDirNameString)

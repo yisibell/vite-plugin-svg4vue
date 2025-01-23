@@ -48,7 +48,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     async transform(source: string, id: string) {
       const { idWithoutQuery, type, matchedId, skipsvgo } = resolveSearchParams(
         id,
-        assetsDirName
+        assetsDirName,
       )
 
       if (matchedId) {

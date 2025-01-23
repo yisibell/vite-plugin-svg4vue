@@ -7,7 +7,7 @@ import type { Config as SvgoConfig } from 'svgo'
 async function optimizeSvg(
   content: string,
   path: string,
-  finalSvgoConfig: SvgoConfig = {}
+  finalSvgoConfig: SvgoConfig = {},
 ) {
   const { data } = await SVGO.optimize(content, {
     ...finalSvgoConfig,
