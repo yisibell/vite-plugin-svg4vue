@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.0.3
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.2...v4.0.3)
+
+### 🩹 Fixes
+
+- Eslint flat config ([cd5f23f](https://github.com/yisibell/vite-plugin-svg4vue/commit/cd5f23f))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.0.2
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.1...v4.0.2)
