@@ -1,5 +1,23 @@
 # CHANGE LOG
 
+## v4.0.1
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.0...v4.0.1)
+
+### 🩹 Fixes
+
+- Client.d.ts exports problem ([e038999](https://github.com/yisibell/vite-plugin-svg4vue/commit/e038999))
+- Exports ([69fcc96](https://github.com/yisibell/vite-plugin-svg4vue/commit/69fcc96))
+- Exports ([440b23b](https://github.com/yisibell/vite-plugin-svg4vue/commit/440b23b))
+
+### 🏡 Chore
+
+- **example:** Update example build ([b51c545](https://github.com/yisibell/vite-plugin-svg4vue/commit/b51c545))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.0.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v3.2.0...v4.0.0)
