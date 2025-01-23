@@ -1,5 +1,9 @@
 # CHANGE LOG
 
+## v4.0.2
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.1...v4.0.2)
+
 ## v4.0.1
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.0...v4.0.1)
