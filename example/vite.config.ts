@@ -14,6 +14,7 @@ export default defineConfig({
       svgoConfig: {
         plugins: [],
       },
+      enableSvgoPresetDefaultConfig: true,
       enableBuildCache: false,
     }),
     vueJsx(),

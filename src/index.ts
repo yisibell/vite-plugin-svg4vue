@@ -1,6 +1,6 @@
 import compileSvg from './compileSvg'
 import optimizeSvg from './optimizeSvg'
-import { readFileSync } from 'fs'
+import { readFileSync } from 'node:fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from './interfaces/core'
 import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
@@ -31,25 +31,31 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
   const disabledSvgo = svgoConfig === false
 
-  const finalSvgoConfig = disabledSvgo
-    ? {}
-    : createSvgoConfig(svgoConfig as SvgoConfig, {
-        moveStrokeAttrToSvgNode: enableMonochromeSvgOptimize,
-        movePathFillAttrToSvgNode: enableMonochromeSvgOptimize,
-        responsiveSVGSize: enableSvgSizeResponsive,
-        presetDefault: enableSvgoPresetDefaultConfig,
-      })
-
   return {
     name: 'vite-plugin-svg4vue',
     configResolved(config) {
       isBuild = config.mode === 'production'
     },
     async transform(source: string, id: string) {
-      const { idWithoutQuery, type, matchedId, skipsvgo } = resolveSearchParams(
-        id,
-        assetsDirName,
-      )
+      const {
+        idWithoutQuery,
+        type,
+        matchedId,
+        skipsvgo,
+        skipMonochrome,
+        skipResposive,
+      } = resolveSearchParams(id, assetsDirName)
+
+      const finalSvgoConfig = disabledSvgo
+        ? {}
+        : createSvgoConfig(svgoConfig as SvgoConfig, {
+            moveStrokeAttrToSvgNode:
+              enableMonochromeSvgOptimize && !skipMonochrome,
+            movePathFillAttrToSvgNode:
+              enableMonochromeSvgOptimize && !skipMonochrome,
+            responsiveSVGSize: enableSvgSizeResponsive && !skipResposive,
+            presetDefault: enableSvgoPresetDefaultConfig,
+          })
 
       if (matchedId) {
         // handle to raw

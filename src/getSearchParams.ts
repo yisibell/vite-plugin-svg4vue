@@ -6,6 +6,8 @@ import {
   RAW_COMPILE_TYPE,
   URL_COMPILE_TYPE,
   SKIP_SVGO_FLAG,
+  SKIP_MONOCHROME,
+  SKIP_RESPONSIVE,
 } from './defaults'
 
 const resolveSearchParams = (url: string, assetsDirName: string | boolean) => {
@@ -34,7 +36,12 @@ const resolveSearchParams = (url: string, assetsDirName: string | boolean) => {
 
   const searchParamsKeys = Object.keys(qs.parse(querystring))
 
+  // 跳过 SVGO 优化
   const skipsvgo = searchParamsKeys.includes(SKIP_SVGO_FLAG)
+  // 跳过单色优化
+  const skipMonochrome = searchParamsKeys.includes(SKIP_MONOCHROME)
+  // 逃过大小优化
+  const skipResposive = searchParamsKeys.includes(SKIP_RESPONSIVE)
 
   let type = undefined
 
@@ -49,6 +56,8 @@ const resolveSearchParams = (url: string, assetsDirName: string | boolean) => {
   return {
     type,
     skipsvgo,
+    skipMonochrome,
+    skipResposive,
     searchParamsKeys,
     matchedId,
     idWithoutQuery,

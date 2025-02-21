@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>twitter</title>
+    <defs>
+        <circle id="path-1" cx="16" cy="16" r="16"></circle>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="MB-商详页" transform="translate(-100.000000, -677.000000)">
+            <g id="twitter" transform="translate(100.000000, 677.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#D8D8D8" xlink:href="#path-1"></use>
+                <g id="编组-2" mask="url(#mask-2)">
+                    <rect id="矩形" fill="#000000" x="0" y="0" width="32" height="32"></rect>
+                    <g id="编组" transform="translate(7.000000, 7.000000)" fill="#FFFFFF">
+                        <path d="M5.37248843,0 L18,18 L12.6301327,18 L0,0 L5.37248843,0 Z M4.60288647,1.16992116 L2.16979942,1.16992116 L13.4067426,16.8741268 L15.8164669,16.8741268 L4.60288647,1.16992116 Z" id="形状结合"></path>
+                        <polygon id="矩形" transform="translate(8.723461, 9.000000) scale(-1, 1) translate(-8.723461, -9.000000) " points="0.021964518 2.63488651e-15 1.6342734 2.63488651e-15 17.4249582 18 15.8496867 18"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
