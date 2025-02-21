@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.1.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.4...v4.1.0)
+
+### 🚀 Enhancements
+
+- Support skip monochrome and responsive size ([7afc7c5](https://github.com/yisibell/vite-plugin-svg4vue/commit/7afc7c5))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.0.4
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.3...v4.0.4)
