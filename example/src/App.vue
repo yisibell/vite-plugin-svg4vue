@@ -22,5 +22,6 @@
 
 <script lang="ts" setup>
 import { RouterView } from 'vue-router'
+
 import { LINKS } from '@/settings'
 </script>
