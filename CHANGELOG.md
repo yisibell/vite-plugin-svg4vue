@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.1.1
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.1.0...v4.1.1)
+
+### 🩹 Fixes
+
+- To prevent compileTemplate from removing the style tag ([c0e2426](https://github.com/yisibell/vite-plugin-svg4vue/commit/c0e2426))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.1.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.0.4...v4.1.0)
