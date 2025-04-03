@@ -134,6 +134,8 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 | `enableBuildCache` | `true` | Whether to enable caching at build time |  `boolean` |
 | `enableMonochromeSvgOptimize` | `true` | Whether to enable **monochrome** svg icon optimize which can move child node (named **path**, Even the **path** wrapped by **g**) 's `fill`, `fill-opacity` and `stroke`, `stroke-opacity` attribute to its parent node (**svg** element). So that you can change the svg icon color with `fill` and `stroke`. | `boolean` |
 | `enableSvgSizeResponsive` | `true` | Whether to enable svg icon responsive.  | `boolean` |
+| `namespaceClassnames` | `true` | Whether to add a namespace for `class` selector.  | `boolean` |
+| `namespaceIDs` | `true` | Whether to add a namespace for `ID` selector.  | `boolean` |
 
 
 ### What `enableSvgSizeResponsive` do ?

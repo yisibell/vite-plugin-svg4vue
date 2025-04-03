@@ -1,7 +1,7 @@
 import { Config } from 'svgo';
 import { Plugin } from 'vite';
 
-interface Svg4VuePluginOptions {
+interface Svg4VuePluginOptions extends Svg4VueDefaultSvgoConfigOptions {
   svgoConfig?: Config | boolean
   enableSvgoPresetDefaultConfig?: boolean
   defaultExport?: 'url' | 'raw' | 'component'
@@ -9,6 +9,11 @@ interface Svg4VuePluginOptions {
   enableBuildCache?: boolean
   enableSvgSizeResponsive?: boolean
   enableMonochromeSvgOptimize?: boolean
+}
+
+interface Svg4VueDefaultSvgoConfigOptions {
+  namespaceClassnames?: boolean
+  namespaceIDs?: boolean
 }
 
 type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => Plugin

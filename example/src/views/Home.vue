@@ -9,6 +9,7 @@
         <MaintenanceSize />
         <SkipsvgoQueryString />
         <GlobUsage />
+        <ClassAndIdNamespace />
       </div>
     </div>
   </div>
@@ -22,6 +23,7 @@ import SkipsvgoQueryString from '@/components/SkipsvgoQueryString/index.vue'
 import MaintenanceColors from '@/components/MaintenanceColors/index.vue'
 import MaintenanceSize from '@/components/MaintenanceSize/index.vue'
 import GlobUsage from '@/components/GlobUsage/index.vue'
+import ClassAndIdNamespace from '@/components/ClassAndIdNamespace/index.vue'
 </script>
 
 <script lang="ts">

@@ -1,11 +1,11 @@
 import compileSvg from './compileSvg'
-import optimizeSvg from './optimizeSvg'
+import { optimizeSvg, defaultSvgoConfig } from './optimizeSvg'
 import { readFileSync } from 'node:fs'
 import { Svg4VuePlugin, Svg4VuePluginOptions } from './interfaces/core'
 import { createSvgoConfig } from 'svgo-extra'
 import compileSvgToRaw from './compileSvgToRaw'
 import { resolveSearchParams } from './getSearchParams'
-import type { Config as SvgoConfig } from 'svgo'
+
 import {
   DEFAULT_OPTIONS,
   COMPONENT_COMPILE_TYPE,
@@ -22,6 +22,8 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     enableMonochromeSvgOptimize = true,
     enableSvgSizeResponsive = true,
     enableSvgoPresetDefaultConfig = true,
+    namespaceClassnames = true,
+    namespaceIDs = true,
   } = options
 
   const svgComponentCache = new Map<string, any>()
@@ -46,16 +48,20 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
         skipResposive,
       } = resolveSearchParams(id, assetsDirName)
 
-      const finalSvgoConfig = disabledSvgo
-        ? {}
-        : createSvgoConfig(svgoConfig as SvgoConfig, {
-            moveStrokeAttrToSvgNode:
-              enableMonochromeSvgOptimize && !skipMonochrome,
-            movePathFillAttrToSvgNode:
-              enableMonochromeSvgOptimize && !skipMonochrome,
-            responsiveSVGSize: enableSvgSizeResponsive && !skipResposive,
-            presetDefault: enableSvgoPresetDefaultConfig,
-          })
+      const finalSvgoConfig = createSvgoConfig(
+        defaultSvgoConfig(svgoConfig, {
+          namespaceClassnames,
+          namespaceIDs,
+        }),
+        {
+          moveStrokeAttrToSvgNode:
+            enableMonochromeSvgOptimize && !skipMonochrome,
+          movePathFillAttrToSvgNode:
+            enableMonochromeSvgOptimize && !skipMonochrome,
+          responsiveSVGSize: enableSvgSizeResponsive && !skipResposive,
+          presetDefault: enableSvgoPresetDefaultConfig,
+        },
+      )
 
       if (matchedId) {
         // handle to raw

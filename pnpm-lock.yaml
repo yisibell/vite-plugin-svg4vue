@@ -8,12 +8,15 @@ importers:
 
   .:
     dependencies:
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
       svgo:
         specifier: ^3.3.2
         version: 3.3.2
       svgo-extra:
-        specifier: 2.3.1
-        version: 2.3.1(svgo@3.3.2)
+        specifier: 2.3.2
+        version: 2.3.2(svgo@3.3.2)
       ufo:
         specifier: ^1.5.4
         version: 1.5.4
@@ -1582,8 +1585,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svgo-extra@2.3.1:
-    resolution: {integrity: sha512-1lowPwRrUKCqEor9eSxcwEtguVQnunLnwTCJAGj77byk60nYT1LSr6ZF8LrsLEU3xFwaOubq0IC1XsTQ9d7WXA==}
+  svgo-extra@2.3.2:
+    resolution: {integrity: sha512-34HdTdcsEtBzyVYmZVdpJxxmyH623v717b5r8s//atuyqZn9OUVQkWpTyxJaBsgxVXRkhTovVTBHOB/il4wR4g==}
     peerDependencies:
       svgo: ^3.0.2
 
@@ -3280,7 +3283,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svgo-extra@2.3.1(svgo@3.3.2):
+  svgo-extra@2.3.2(svgo@3.3.2):
     dependencies:
       svgo: 3.3.2
 
