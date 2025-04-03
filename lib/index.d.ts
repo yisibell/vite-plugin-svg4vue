@@ -14,6 +14,7 @@ interface Svg4VuePluginOptions extends Svg4VueDefaultSvgoConfigOptions {
 interface Svg4VueDefaultSvgoConfigOptions {
   namespaceClassnames?: boolean
   namespaceIDs?: boolean
+  namespacePrefix?: string
 }
 
 type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => Plugin

@@ -14,6 +14,7 @@ export interface Svg4VuePluginOptions extends Svg4VueDefaultSvgoConfigOptions {
 export interface Svg4VueDefaultSvgoConfigOptions {
   namespaceClassnames?: boolean
   namespaceIDs?: boolean
+  namespacePrefix?: string
 }
 
 export type Svg4VuePlugin = (opts?: Svg4VuePluginOptions) => VitePlugin

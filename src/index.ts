@@ -24,6 +24,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     enableSvgoPresetDefaultConfig = true,
     namespaceClassnames = true,
     namespaceIDs = true,
+    namespacePrefix = 'a',
   } = options
 
   const svgComponentCache = new Map<string, any>()
@@ -49,10 +50,15 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
       } = resolveSearchParams(id, assetsDirName)
 
       const finalSvgoConfig = createSvgoConfig(
-        defaultSvgoConfig(svgoConfig, {
-          namespaceClassnames,
-          namespaceIDs,
-        }),
+        defaultSvgoConfig(
+          svgoConfig,
+          {
+            namespaceClassnames,
+            namespaceIDs,
+            namespacePrefix,
+          },
+          idWithoutQuery,
+        ),
         {
           moveStrokeAttrToSvgNode:
             enableMonochromeSvgOptimize && !skipMonochrome,

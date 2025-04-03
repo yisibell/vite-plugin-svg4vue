@@ -1,7 +1,10 @@
 import typescript from '@rollup/plugin-typescript'
 import commonjs from '@rollup/plugin-commonjs'
 import dts from 'rollup-plugin-dts'
-import pkg from './package.json' assert { type: 'json' }
+import fs from 'node:fs'
+
+const pkgjson = fs.readFileSync('./package.json', 'utf-8')
+const pkg = JSON.parse(pkgjson)
 
 export default [
   {
