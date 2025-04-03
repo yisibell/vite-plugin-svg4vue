@@ -1,5 +1,26 @@
 # CHANGE LOG
 
+## v4.2.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.1.1...v4.2.0)
+
+### 🚀 Enhancements
+
+- Add selector namespace for id and class ([a2ff554](https://github.com/yisibell/vite-plugin-svg4vue/commit/a2ff554))
+
+### 🩹 Fixes
+
+- Class namespaces ([3d261d2](https://github.com/yisibell/vite-plugin-svg4vue/commit/3d261d2))
+
+### 🏡 Chore
+
+- **example:** Update ([c05f69d](https://github.com/yisibell/vite-plugin-svg4vue/commit/c05f69d))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+- Elenh ([@yisibell](http://github.com/yisibell))
+
 ## v4.1.1
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.1.0...v4.1.1)
