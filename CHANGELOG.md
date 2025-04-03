@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.3.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.2.0...v4.3.0)
+
+### 🚀 Enhancements
+
+- Use file id for selector namespace generation and add `namespacePrefix` opts ([6d0554e](https://github.com/yisibell/vite-plugin-svg4vue/commit/6d0554e))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.2.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.1.1...v4.2.0)
