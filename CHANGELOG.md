@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.4.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.3.0...v4.4.0)
+
+### 🚀 Enhancements
+
+- Add plugin invocation order config via `enforce`, defaults is `pre` ([e15ba6d](https://github.com/yisibell/vite-plugin-svg4vue/commit/e15ba6d))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.3.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.2.0...v4.3.0)
