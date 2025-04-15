@@ -35,9 +35,12 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
   const disabledSvgo = svgoConfig === false
 
+  const finalEnforce =
+    typeof enforce === 'string' ? enforce : enforce === true ? 'pre' : undefined
+
   return {
     name: 'vite-plugin-svg4vue',
-    enforce,
+    enforce: finalEnforce,
     configResolved(config) {
       isBuild = config.mode === 'production'
     },

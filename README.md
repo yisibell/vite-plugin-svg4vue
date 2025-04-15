@@ -137,7 +137,7 @@ If you are using TypeScript, **vite-plugin-svg4vue/client** can be added to `d.t
 | `namespaceClassnames` | `true` | Whether to add a namespace for `class` selector.  | `boolean` |
 | `namespaceIDs` | `true` | Whether to add a namespace for `ID` selector.  | `boolean` |
 | `namespacePrefix` | `'a'` | Whether to add a namespace prefix string for selector.  | `string` |
-| `enforce` | `'pre'` | Define this plugin invocation order. | `string` |
+| `enforce` | `'pre'` | Define this plugin invocation order. | `string` or `boolean` |
 
 
 ### What `enableSvgSizeResponsive` do ?
