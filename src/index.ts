@@ -25,6 +25,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
     namespaceClassnames = true,
     namespaceIDs = true,
     namespacePrefix = 'a',
+    enforce = 'pre',
   } = options
 
   const svgComponentCache = new Map<string, any>()
@@ -36,6 +37,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
 
   return {
     name: 'vite-plugin-svg4vue',
+    enforce,
     configResolved(config) {
       isBuild = config.mode === 'production'
     },

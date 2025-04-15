@@ -9,6 +9,7 @@ export interface Svg4VuePluginOptions extends Svg4VueDefaultSvgoConfigOptions {
   enableBuildCache?: boolean
   enableSvgSizeResponsive?: boolean
   enableMonochromeSvgOptimize?: boolean
+  enforce?: VitePlugin['enforce']
 }
 
 export interface Svg4VueDefaultSvgoConfigOptions {

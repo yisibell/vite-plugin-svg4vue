@@ -9,6 +9,7 @@ interface Svg4VuePluginOptions extends Svg4VueDefaultSvgoConfigOptions {
   enableBuildCache?: boolean
   enableSvgSizeResponsive?: boolean
   enableMonochromeSvgOptimize?: boolean
+  enforce?: Plugin['enforce']
 }
 
 interface Svg4VueDefaultSvgoConfigOptions {
