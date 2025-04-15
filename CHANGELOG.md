@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.5.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.4.0...v4.5.0)
+
+### 🚀 Enhancements
+
+- Support disabled enforce config via `false` ([8df0184](https://github.com/yisibell/vite-plugin-svg4vue/commit/8df0184))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.4.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.3.0...v4.4.0)
