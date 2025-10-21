@@ -96,7 +96,10 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
             }
           }
 
-          return cachedSvgRawResult
+          return {
+            code: cachedSvgRawResult,
+            map: null,
+          }
         }
 
         // handle to url
@@ -104,7 +107,10 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           (defaultExport === URL_COMPILE_TYPE && typeof type === 'undefined') ||
           type === URL_COMPILE_TYPE
         ) {
-          return source
+          return {
+            code: source,
+            map: null,
+          }
         }
 
         // handle to component
