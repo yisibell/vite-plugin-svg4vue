@@ -1,5 +1,17 @@
 # CHANGE LOG
 
+## v4.5.1
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.5.0...v4.5.1)
+
+### 🩹 Fixes
+
+- Return a null source map when imports as raw text or url ([3e45156](https://github.com/yisibell/vite-plugin-svg4vue/commit/3e45156))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.5.0
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.4.0...v4.5.0)
