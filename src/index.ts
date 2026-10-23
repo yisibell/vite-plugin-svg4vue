@@ -99,6 +99,7 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
           return {
             code: cachedSvgRawResult,
             map: null,
+            moduleType: 'js',
           }
         }
 
@@ -137,7 +138,10 @@ const svg4VuePlugin: Svg4VuePlugin = (options = {}) => {
             }
           }
 
-          return cachedSvgComponentResult
+          return {
+            ...cachedSvgComponentResult,
+            moduleType: 'js',
+          }
         }
       }
     },
