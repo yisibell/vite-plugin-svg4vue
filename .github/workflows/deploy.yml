@@ -11,19 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Set a Node.js version
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.12.0
-
       # pull code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Enable the workspace package manager
-      - name: Enable pnpm
-        run: corepack enable
+      # Install pnpm directly to avoid Corepack signature metadata failures.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+
+      # Set a Node.js version
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
 
       # build to static
       - name: Build Example
