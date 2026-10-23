@@ -25,7 +25,7 @@ export default tseslint.config(
           parser: 'typescript',
           semi: false,
           singleQuote: true,
-          endOfLine: 'lf',
+          endOfLine: 'auto',
         },
       ],
     },
