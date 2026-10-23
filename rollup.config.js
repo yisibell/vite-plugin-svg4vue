@@ -5,11 +5,17 @@ import fs from 'node:fs'
 
 const pkgjson = fs.readFileSync('./package.json', 'utf-8')
 const pkg = JSON.parse(pkgjson)
+const external = [
+  /^node:/,
+  'vue/compiler-sfc',
+  ...Object.keys(pkg.dependencies ?? {}),
+  ...Object.keys(pkg.peerDependencies ?? {}),
+]
 
 export default [
   {
     input: 'src/index.ts',
-    external: Object.keys(pkg.dependencies),
+    external,
     plugins: [
       commonjs(),
       typescript(), // so Rollup can convert TypeScript to JavaScript
@@ -27,6 +33,7 @@ export default [
   },
   {
     input: './types/index.d.ts',
+    external,
     output: [{ file: pkg.types, format: 'es' }],
     plugins: [dts()],
   },
