@@ -1,5 +1,28 @@
 # CHANGE LOG
 
+## v5.0.0
+
+[compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.5.1...v5.0.0)
+
+### 🚀 Enhancements
+
+- ⚠️  Supports vite 7 ([e72e852](https://github.com/yisibell/vite-plugin-svg4vue/commit/e72e852))
+- ⚠️  Vite 7 and fix deploy ([d6a3478](https://github.com/yisibell/vite-plugin-svg4vue/commit/d6a3478))
+
+### 📦 Build
+
+- Migrate to pnpm monorepo ([9a2160f](https://github.com/yisibell/vite-plugin-svg4vue/commit/9a2160f))
+- Fix eslint format ([5f02f5d](https://github.com/yisibell/vite-plugin-svg4vue/commit/5f02f5d))
+
+#### ⚠️ Breaking Changes
+
+- ⚠️  Supports vite 7 ([e72e852](https://github.com/yisibell/vite-plugin-svg4vue/commit/e72e852))
+- ⚠️  Vite 7 and fix deploy ([d6a3478](https://github.com/yisibell/vite-plugin-svg4vue/commit/d6a3478))
+
+### ❤️ Contributors
+
+- Wenqing <wenqing@kerrylan.com>
+
 ## v4.5.1
 
 [compare changes](https://github.com/yisibell/vite-plugin-svg4vue/compare/v4.5.0...v4.5.1)
