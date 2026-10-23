@@ -1,7 +1,8 @@
 import pluginVue from 'eslint-plugin-vue'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import pluginVitest from '@vitest/eslint-plugin'
-import skipFormatting from '@vue/eslint-config-prettier'
+import eslintConfigPrettier from 'eslint-config-prettier'
+import format from 'eslint-plugin-format'
 
 export default [
   {
@@ -21,5 +22,41 @@ export default [
     ...pluginVitest.configs.recommended,
     files: ['src/**/__tests__/*'],
   },
-  skipFormatting,
+  eslintConfigPrettier,
+  {
+    files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
+    plugins: {
+      format,
+    },
+    rules: {
+      'format/prettier': [
+        'error',
+        {
+          parser: 'typescript',
+          semi: false,
+          singleQuote: true,
+          printWidth: 100,
+          endOfLine: 'lf',
+        },
+      ],
+    },
+  },
+  {
+    files: ['**/*.vue'],
+    plugins: {
+      format,
+    },
+    rules: {
+      'format/prettier': [
+        'error',
+        {
+          parser: 'vue',
+          semi: false,
+          singleQuote: true,
+          printWidth: 100,
+          endOfLine: 'lf',
+        },
+      ],
+    },
+  },
 ]

@@ -21,13 +21,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # using pnpm to install deps
-      - run: npm i -g pnpm
+      # Enable the workspace package manager
+      - name: Enable pnpm
+        run: corepack enable
 
       # build to static
       - name: Build Example
-        run: pnpm install && pnpm build-only
-        working-directory: example
+        run: pnpm install --frozen-lockfile && pnpm --filter example build-only
 
       # deploy to `docs` branch
       - name: Deploy 🚀
