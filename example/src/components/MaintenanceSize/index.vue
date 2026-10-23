@@ -4,8 +4,8 @@
       <template #title> <code>Maintenance of size</code> </template>
 
       <template #sub-title>
-        You can change the SVG icon <b>size</b> with <code>font-size</code> or
-        <code>width</code>, both of this will be responsive.
+        You can change the SVG icon <b>size</b> with <code>font-size</code> or <code>width</code>,
+        both of this will be responsive.
       </template>
 
       <template #demo>

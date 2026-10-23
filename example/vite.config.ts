@@ -1,13 +1,13 @@
-import { fileURLToPath, URL } from 'node:url'
+import { fileURLToPath, URL } from "node:url";
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import { svg4VuePlugin } from 'vite-plugin-svg4vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import { svg4VuePlugin } from "vite-plugin-svg4vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/vite-plugin-svg4vue/',
+  base: "/vite-plugin-svg4vue/",
   plugins: [
     vue(),
     svg4VuePlugin({
@@ -21,10 +21,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   build: {
     // sourcemap: 'hidden',
   },
-})
+});

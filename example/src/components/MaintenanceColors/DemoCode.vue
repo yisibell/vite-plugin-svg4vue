@@ -2,9 +2,7 @@
   <div class="demo">
     <div class="d-flex align-center">
       <div class="mr-16">
-        <span class="mr-8">
-          1. change color via <code>fill</code> attribute
-        </span>
+        <span class="mr-8"> 1. change color via <code>fill</code> attribute </span>
         <input v-model="fillColor" type="color" /> :
       </div>
       <span><PPTSvgIcon :fill="fillColor" /></span>
@@ -13,8 +11,7 @@
     <div class="">
       <div class="mb-16">
         <span class="mr-8">
-          2. change color via <code>fill</code> and
-          <code>stroke</code> attribute:
+          2. change color via <code>fill</code> and <code>stroke</code> attribute:
         </span>
       </div>
 

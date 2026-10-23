@@ -25,7 +25,12 @@
   ],
   "scripts": {
     "dev": "rollup -c -w",
+    "dev:example": "pnpm --filter example dev",
     "build": "rollup -c",
+    "build:example": "pnpm --filter example build-only",
+    "build:all": "pnpm build && pnpm --filter example build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "release": "npm run build && changelogen --release && npm publish --access=public && git push --follow-tags"
   },
   "repository": {
@@ -52,15 +57,23 @@
     "url": "https://github.com/yisibell/vite-plugin-svg4vue/issues"
   },
   "homepage": "https://github.com/yisibell/vite-plugin-svg4vue#readme",
+  "dependencies": {
+    "defu": "^6.1.4",
+    "ohash": "^2.0.11",
+    "svgo": "^3.3.2",
+    "svgo-extra": "2.3.2",
+    "ufo": "^1.5.4"
+  },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
+    "@types/node": "^22.13.4",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-typescript": "^12.1.2",
     "changelogen": "~0.5.7",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-format": "^2.0.1",
     "prettier": "^3.4.2",
     "rollup": "^4.31.0",
     "rollup-plugin-dts": "^6.1.1",
@@ -70,11 +83,5 @@
     "vite": "~6.0.11",
     "vue": "^3.5.13"
   },
-  "dependencies": {
-    "defu": "^6.1.4",
-    "ohash": "^2.0.11",
-    "svgo": "^3.3.2",
-    "svgo-extra": "2.3.2",
-    "ufo": "^1.5.4"
-  }
+  "packageManager": "pnpm@9.15.4"
 }

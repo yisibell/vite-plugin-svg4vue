@@ -5,8 +5,7 @@
 
       <template #sub-title>
         You can import SVG as a raw text via
-        <code>?raw</code> query string, and then you can render the SVG with
-        <code>v-html</code>.
+        <code>?raw</code> query string, and then you can render the SVG with <code>v-html</code>.
       </template>
 
       <template #demo>

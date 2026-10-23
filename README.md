@@ -39,6 +39,52 @@ $ yarn add vite-plugin-svg4vue --dev
 $ npm i vite-plugin-svg4vue -D
 ```
 
+# Development
+
+The repository uses pnpm workspaces. The package is at the repository root and the Vue demo is the `example` workspace.
+
+The root-level scripts are:
+
+| Script | Description |
+| :--- | :--- |
+| `pnpm dev` | Watch and rebuild the `vite-plugin-svg4vue` package with Rollup while developing the plugin. |
+| `pnpm dev:example` | Start the `example` Vite development server. |
+| `pnpm build` | Build the plugin package and generate JavaScript and TypeScript declaration files in `lib/`. |
+| `pnpm build:example` | Build the `example` app with Vite. This runs the production bundler only. |
+| `pnpm build:all` | Build the plugin, then run the example's complete `build` script, including type checking and the production build. |
+| `pnpm lint` | Check the root package with ESLint and `eslint-plugin-format` without changing files. |
+| `pnpm lint:fix` | Check and automatically format/fix the root package. |
+| `pnpm --filter example lint` | Check the `example` workspace with ESLint and `eslint-plugin-format`. |
+| `pnpm --filter example lint:fix` | Check and automatically format/fix the `example` workspace. |
+| `pnpm release` | Build the package, generate a changelog, publish it to npm, and push release tags. Use only when preparing a release. |
+
+For example, run the demo in development mode from the repository root:
+
+```bash
+pnpm dev:example
+```
+
+This is equivalent to:
+
+```bash
+pnpm --filter example dev
+```
+
+You can also enter the workspace directory and run its scripts directly:
+
+```bash
+cd example
+pnpm dev
+pnpm build
+```
+
+To add a dependency to the demo, run this from the repository root:
+
+```bash
+pnpm --filter example add <package>
+pnpm --filter example add -D <package>
+```
+
 # Usage
 ## Setup
 

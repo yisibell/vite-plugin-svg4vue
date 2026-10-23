@@ -5,8 +5,7 @@
 
       <template #sub-title>
         <div>
-          Supports importing multiple modules from the file system via the
-          special
+          Supports importing multiple modules from the file system via the special
           <code class="lang-js">import.meta.glob</code>
           function:
         </div>

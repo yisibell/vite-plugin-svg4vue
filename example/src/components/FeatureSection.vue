@@ -31,7 +31,7 @@ const props = withDefaults(
   }>(),
   {
     reverse: false,
-  }
+  },
 )
 
 const styleVars = computed(() => ({
