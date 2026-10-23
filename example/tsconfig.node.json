@@ -13,6 +13,6 @@
     "composite": true,
     "types": ["node"],
     "module": "ESNext",
-    "moduleResolution": "node"
+    "moduleResolution": "bundler"
   }
 }
